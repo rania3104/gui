@@ -158,6 +158,77 @@ def get_movies_data():
     # Update the canvas to include the new frame
     movies_info_frame_inner.update_idletasks()
     canvas.config(scrollregion=canvas.bbox("all"))
+
+def search_characters(search_term):
+    url = f"https://api.potterdb.com/v1/characters?page[number]="
+    results = []
+
+    for page_number in range(1, 48):
+        search_url = f"{url}{page_number}"
+        response = requests.get(search_url)
+        data = response.json()
+        characters = data.get('data', [])
+
+        for character in characters:
+            name = character['attributes'].get('name', '')
+            house = character['attributes'].get('house', '')
+            patronus = character['attributes'].get('patronus', '')
+            born = character['attributes'].get('born', '')
+            died = character['attributes'].get('died', '')
+
+            if search_term in name:
+                results.append((name, house, patronus, born, died))
+
+    display_search_results(results)
+
+def display_search_results(results):
+    # Destroy the existing widgets in characters_info_frame
+    for widget in characters_info_frame.winfo_children():
+        widget.destroy()
+
+    # Add a canvas for the characters info frame with a vertical scrollbar
+    canvas = Canvas(characters_info_frame, bg="white")
+    scrollbar = Scrollbar(characters_info_frame, orient="vertical", command=canvas.yview)
+    scrollbar.pack(side="right", fill="y")
+    canvas.pack(side="left", fill="both", expand=True)
+    canvas.configure(yscrollcommand=scrollbar.set)
+
+    # Create a new frame to hold the character information
+    characters_info_frame_inner = Frame(canvas, bg="white")
+    canvas.create_window((0, 0), window=characters_info_frame_inner, anchor="nw")
+
+    for i, result in enumerate(results):
+        name, house, patronus, born, died = result
+
+        # Calculate the column for each label
+        column = i % 2
+
+        # Display character name
+        character_name_label = Label(characters_info_frame_inner, text=f"Name: {name}", font=('Arial', 14, 'bold'),wraplength=350)
+        character_name_label.grid(row=i // 2 * 6, column=column * 5, pady=2, padx=10, sticky=W)
+
+        # Display character house
+        character_house_label = Label(characters_info_frame_inner, text=f"House: {house}", font=('Arial', 12))
+        character_house_label.grid(row=i // 2 * 6 + 1, column=column * 5, pady=2, padx=10, sticky=W)
+
+        # Display character patronus
+        character_patronus_label = Label(characters_info_frame_inner, text=f"Patronus: {patronus}", font=('Arial', 12))
+        character_patronus_label.grid(row=i // 2 * 6 + 2, column=column * 5, pady=2, padx=10, sticky=W)
+        
+        # Display character birthday
+        character_born_label = Label(characters_info_frame_inner, text=f"Born: {born}", font=('Arial', 12),wraplength=350)
+        character_born_label.grid(row=i // 2 * 6 + 3, column=column * 5, pady=2, padx=10, sticky=W)
+
+        # Display character death day
+        character_death_label = Label(characters_info_frame_inner, text=f"Died: {died}", font=('Arial', 12),wraplength=350)
+        character_death_label.grid(row=i // 2 * 6 + 4, column=column * 5, pady=2, padx=10, sticky=W)
+
+        # Add an empty space as a separator
+        Label(characters_info_frame_inner, text='', font=('Arial', 2)).grid(row=i // 2 * 6 + 5, column=column * 5)
+
+    # Update the canvas to include the new frame
+    characters_info_frame_inner.update_idletasks()
+    canvas.config(scrollregion=canvas.bbox("all"))
     
 def get_random_potion_data():
     # Choose a random page number for potions
@@ -282,7 +353,6 @@ def get_random_spell_data():
         # Update the canvas to include the new frame
         spell_info_frame.update_idletasks()
         spell_info_frame.pack_propagate(False)
-        
 root = Tk()
 root.title("Harry Potter World")
 root.geometry("880x600")
@@ -419,7 +489,24 @@ def movies_page():
     movies_page_frame.pack(fill=BOTH, expand=True)
 
 def characters_page():
+    global characters_info_frame
     characters_page_frame = Frame(main_frame)
+
+    # Add search bar frame
+    search_frame = Frame(characters_page_frame)
+    search_frame.pack(side=TOP, pady=10)
+
+    # Create and pack search label
+    search_label = Label(search_frame, text="Search Character:", font=('Arial', 12))
+    search_label.pack(side=LEFT, padx=5)
+
+    # Create and pack search entry
+    search_entry = Entry(search_frame, font=('Arial', 12), width=30)
+    search_entry.pack(side=LEFT, padx=5)
+
+    # Create and pack search button
+    search_button = Button(search_frame, text="Search", font=('Arial', 12), bg="blue", fg="white", command=lambda: search_characters(search_entry.get()))
+    search_button.pack(side=LEFT, padx=5)
 
     # Add buttons frame
     buttons_frame = Frame(characters_page_frame)
@@ -432,6 +519,10 @@ def characters_page():
     # Add 'Exit' button
     exit_button = Button(buttons_frame, text="Exit", font=('Arial', 12), bg="red", fg="white", command=lambda: switch_indicator(indicator=characters_indicator, page=replace_main_frame))
     exit_button.pack(side=LEFT, padx=5)
+
+    # Add characters info frame
+    characters_info_frame = Frame(characters_page_frame)
+    characters_info_frame.pack(fill=BOTH, expand=True)
 
     characters_page_frame.pack(fill=BOTH, expand=True)
 
