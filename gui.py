@@ -3,6 +3,7 @@ from PIL import Image, ImageTk
 from io import BytesIO
 import requests
 import json
+from random import randint
 
 def replace_start_frame():
     # Function to replace the main frame with the replacement frame
@@ -158,6 +159,130 @@ def get_movies_data():
     movies_info_frame_inner.update_idletasks()
     canvas.config(scrollregion=canvas.bbox("all"))
     
+def get_random_potion_data():
+    # Choose a random page number for potions
+    random_page_number = randint(1, 2)
+    
+    url = f"https://api.potterdb.com/v1/potions?page[number]={random_page_number}"
+    response = requests.get(url)
+    data = response.json()
+
+    with open("potions.json", 'w') as file:
+        json.dump(data, file, indent=6)
+
+    potions = data['data']
+
+    if potions:
+        # Choose a random potion
+        random_potion_index = randint(0, len(potions)-1)
+        random_potion = potions[random_potion_index]['attributes']
+
+        # Destroy the existing widgets in potions_info_frame
+        for widget in potions_info_frame.winfo_children():
+            widget.destroy()
+
+        # Display random potion image
+        potion_image_url = random_potion['image']
+        potion_image_response = requests.get(potion_image_url)
+        potion_image = Image.open(BytesIO(potion_image_response.content))
+        potion_image = potion_image.resize((350, 350))  # Resize the image for display
+
+        potion_image = ImageTk.PhotoImage(potion_image)
+        potion_image_label = Label(potions_info_frame, image=potion_image)
+        potion_image_label.image = potion_image
+        potion_image_label.grid(row=0, rowspan=6, column=0, padx=10,pady=10)
+
+        # Display random potion name
+        potion_name = random_potion.get('name', 'N/A')
+        potion_name_label = Label(potions_info_frame, text=f"Name: {potion_name}", font=('Arial', 14, 'bold'))
+        potion_name_label.grid(row=1, column=1, columnspan=8, pady=2,padx=10)
+
+        # Display random potion effect
+        potion_effect = random_potion.get('effect', 'N/A')
+        potion_effect_label = Label(potions_info_frame, text=f"Effect: {potion_effect}", font=('Arial', 12), wraplength=390)
+        potion_effect_label.grid(row=2, column=1, columnspan=8, pady=2,padx=10)
+
+        # Display random potion ingredients
+        potion_ingredients = random_potion.get('ingredients', 'N/A')
+        potion_ingredients_label = Label(potions_info_frame, text=f"Ingredients: {potion_ingredients}", font=('Arial', 12), wraplength=390)
+        potion_ingredients_label.grid(row=3, column=1, columnspan=8, pady=2,padx=10)
+
+        # Display random potion characteristics
+        potion_characteristics = random_potion.get('characteristics', 'N/A')
+        potion_characteristics_label = Label(potions_info_frame, text=f"Characteristics: {potion_characteristics}", font=('Arial', 12), wraplength=390)
+        potion_characteristics_label.grid(row=4, column=1, columnspan=8, pady=2,padx=10)
+
+        # Display random potion difficulty
+        potion_difficulty = random_potion.get('difficulty', 'N/A')
+        potion_difficulty_label = Label(potions_info_frame, text=f"Difficulty: {potion_difficulty}", font=('Arial', 12))
+        potion_difficulty_label.grid(row=5, column=1, columnspan=8, pady=2,padx=10)
+
+        # Update the canvas to include the new frame
+        potions_info_frame.update_idletasks()
+        potions_info_frame.pack_propagate(False)
+
+def get_random_spell_data():
+    # Choose a random page number for spells
+    random_page_number = randint(1, 4)
+    
+    url = f"https://api.potterdb.com/v1/spells?page[number]={random_page_number}"
+    response = requests.get(url)
+    data = response.json()
+
+    with open("spells.json", 'w') as file:
+        json.dump(data, file, indent=6)
+
+    spells = data['data']
+
+    if spells:
+        # Choose a random spell
+        random_spell_index = randint(0, len(spells)-1)
+        random_spell = spells[random_spell_index]['attributes']
+
+        # Destroy the existing widgets in spells_info_frame
+        for widget in spell_info_frame.winfo_children():
+            widget.destroy()
+
+        # Display random spell image
+        spell_image_url = random_spell['image']
+        spell_image_response = requests.get(spell_image_url)
+        spell_image = Image.open(BytesIO(spell_image_response.content))
+        spell_image = spell_image.resize((350, 350))  # Resize the image for display
+
+        spell_image = ImageTk.PhotoImage(spell_image)
+        spell_image_label = Label(spell_info_frame, image=spell_image)
+        spell_image_label.image = spell_image
+        spell_image_label.grid(row=0, rowspan=6, column=0, padx=10,pady=10)
+
+        # Display random spell name
+        spell_name = random_spell.get('name', 'N/A')
+        spell_name_label = Label(spell_info_frame, text=f"Name: {spell_name}", font=('Arial', 14, 'bold'))
+        spell_name_label.grid(row=1, column=1, columnspan=8, pady=2,padx=10)
+
+        # Display random spell effect
+        spell_effect = random_spell.get('effect', 'N/A')
+        spell_effect_label = Label(spell_info_frame, text=f"Effect: {spell_effect}", font=('Arial', 12),wraplength=390)
+        spell_effect_label.grid(row=2, column=1, columnspan=8, pady=2,padx=10)
+
+        # Display random spell category
+        spell_category = random_spell.get('category', 'N/A')
+        spell_category_label = Label(spell_info_frame, text=f"Category: {spell_category}", font=('Arial', 12),wraplength=390)
+        spell_category_label.grid(row=3, column=1, columnspan=8, pady=2,padx=10)
+
+        # Display random spell light
+        spell_light = random_spell.get('light', 'N/A')
+        spell_light_label = Label(spell_info_frame, text=f"Light: {spell_light}", font=('Arial', 12))
+        spell_light_label.grid(row=4, column=1, columnspan=8, pady=2,padx=10)
+
+        # Display random spell incantation
+        spell_incantation = random_spell.get('difficulty', 'N/A')
+        spell_incantation_label = Label(spell_info_frame, text=f"Difficulty: {spell_incantation}", font=('Arial', 12))
+        spell_incantation_label.grid(row=5, column=1, columnspan=8, pady=2,padx=10)
+
+        # Update the canvas to include the new frame
+        spell_info_frame.update_idletasks()
+        spell_info_frame.pack_propagate(False)
+        
 root = Tk()
 root.title("Harry Potter World")
 root.geometry("880x600")
@@ -311,11 +436,16 @@ def characters_page():
     characters_page_frame.pack(fill=BOTH, expand=True)
 
 def potions_page():
+    global potions_page_frame, potions_info_frame
     potions_page_frame = Frame(main_frame)
 
     # Add buttons frame
     buttons_frame = Frame(potions_page_frame)
     buttons_frame.pack(side=TOP, pady=10)
+
+    # Add 'Get Random Potions' button
+    get_random_potions_button = Button(buttons_frame, text="Get A Random Potion", font=('Arial', 12), bg="blue", fg="white", command=get_random_potion_data)
+    get_random_potions_button.pack(side=LEFT, padx=5)
 
     # Add 'Instructions' button
     instructions_button = Button(buttons_frame, text="Instructions", font=('Arial', 12), bg="green", fg="white", command=lambda: switch_indicator(indicator=potions_indicator, page=replace_start_frame))
@@ -325,14 +455,23 @@ def potions_page():
     exit_button = Button(buttons_frame, text="Exit", font=('Arial', 12), bg="red", fg="white", command=lambda: switch_indicator(indicator=potions_indicator, page=replace_main_frame))
     exit_button.pack(side=LEFT, padx=5)
 
+    # Add potions info frame
+    potions_info_frame = Frame(potions_page_frame)
+    potions_info_frame.pack(fill=BOTH, expand=True)
+
     potions_page_frame.pack(fill=BOTH, expand=True)
 
 def spells_page():
+    global spells_page_frame, spell_info_frame
     spells_page_frame = Frame(main_frame)
 
     # Add buttons frame
     buttons_frame = Frame(spells_page_frame)
     buttons_frame.pack(side=TOP, pady=10)
+
+    # Add 'Get Random Spell' button
+    get_random_spell_button = Button(buttons_frame, text="Get A Random Spell", font=('Arial', 12), bg="blue", fg="white", command=get_random_spell_data)
+    get_random_spell_button.pack(side=LEFT, padx=5)
 
     # Add 'Instructions' button
     instructions_button = Button(buttons_frame, text="Instructions", font=('Arial', 12), bg="green", fg="white", command=lambda: switch_indicator(indicator=spells_indicator, page=replace_start_frame))
@@ -341,6 +480,10 @@ def spells_page():
     # Add 'Exit' button
     exit_button = Button(buttons_frame, text="Exit", font=('Arial', 12), bg="red", fg="white", command=lambda: switch_indicator(indicator=spells_indicator, page=replace_main_frame))
     exit_button.pack(side=LEFT, padx=5)
+
+    # Add spells info frame
+    spell_info_frame = Frame(spells_page_frame)
+    spell_info_frame.pack(fill=BOTH, expand=True)
 
     spells_page_frame.pack(fill=BOTH, expand=True)
 
