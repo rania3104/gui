@@ -31,21 +31,19 @@ def quit_application():
     root.destroy()
 
 def get_books_data():
-    url= f"https://api.potterdb.com/v1/books"
+    url = f"https://api.potterdb.com/v1/books"
     response = requests.get(url)
     data = response.json()
 
-    with open("books.json",'w') as file:
-        json.dump(data,file,indent =6)
+    with open("books.json", 'w') as file:
+        json.dump(data, file, indent=6)
 
-    book=data['data']
+    book = data['data']
 
-    for i in range(0,len(book)):
-        book_title = (book[i]['attributes']['title'])
-        book_title_label = Label(books_page_frame, text=book_title, font=('Arial', 16))
-        book_title_label.pack(pady=5)
-
-    
+    for i in range(0, len(book)):
+        book_title = book[i]['attributes']['title']
+        book_title_label = Label(books_info_frame, text=book_title, font=('Arial', 10))
+        book_title_label.grid(row=i // 3, column=i % 3, pady=2)
 
 root = Tk()
 root.title("Harry Potter World")
@@ -131,20 +129,28 @@ options_frame.pack_propagate(False)
 options_frame.configure(width=800,height=60)
 
 def books_page():
-    global books_page_frame
+    global books_page_frame, books_info_frame
     books_page_frame = Frame(main_frame)
 
+    # Add buttons frame
+    buttons_frame = Frame(books_page_frame)
+    buttons_frame.pack(side=TOP, pady=10)
+
     # Add 'Get Books Data' button
-    get_books_button = Button(books_page_frame, text="Get Books Data", font=('Arial', 16), bg="blue", fg="white", command=get_books_data)
-    get_books_button.pack(pady=10)
+    get_books_button = Button(buttons_frame, text="Get Books Data", font=('Arial', 12), bg="blue", fg="white", command=get_books_data)
+    get_books_button.pack(side=LEFT, padx=5)
 
     # Add 'Instructions' button
-    instructions_button = Button(books_page_frame, text="Instructions", font=('Arial', 16), bg="green", fg="white", command=lambda: switch_indicator(indicator=books_indicator, page=replace_start_frame))
-    instructions_button.pack(pady=10)
+    instructions_button = Button(buttons_frame, text="Instructions", font=('Arial', 12), bg="green", fg="white", command=lambda: switch_indicator(indicator=books_indicator, page=replace_start_frame))
+    instructions_button.pack(side=LEFT, padx=5)
 
     # Add 'Exit' button
-    exit_button = Button(books_page_frame, text="Exit", font=('Arial', 16), bg="red", fg="white", command=lambda: switch_indicator(indicator=books_indicator, page=replace_main_frame))
-    exit_button.pack(pady=10)
+    exit_button = Button(buttons_frame, text="Exit", font=('Arial', 12), bg="red", fg="white", command=lambda: switch_indicator(indicator=books_indicator, page=replace_main_frame))
+    exit_button.pack(side=LEFT, padx=5)
+
+    # Add books info frame
+    books_info_frame = Frame(books_page_frame)
+    books_info_frame.pack(fill=BOTH, expand=True)
 
     books_page_frame.pack(fill=BOTH, expand=True)
 
