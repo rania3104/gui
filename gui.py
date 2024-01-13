@@ -4,6 +4,7 @@ from io import BytesIO
 import requests
 import json
 from random import randint
+from tkinter import PhotoImage
 
 def replace_start_frame():
     # Function to replace the main frame with the replacement frame
@@ -179,7 +180,19 @@ def search_characters(search_term):
             if search_term in name:
                 results.append((name, house, patronus, born, died))
 
-    display_search_results(results)
+    if not results:
+        display_no_results_message()
+    else:
+        display_search_results(results)
+
+def display_no_results_message():
+    # Destroy the existing widgets in characters_info_frame
+    for widget in characters_info_frame.winfo_children():
+        widget.destroy()
+
+    # Add a label to display the "No character found" message
+    no_results_label = Label(characters_info_frame, text="No character found! Make sure the first letter of each name is in upper case", font=('Arial', 14), wraplength=400, justify='center')
+    no_results_label.pack(pady=50)
 
 def display_search_results(results):
     # Destroy the existing widgets in characters_info_frame
