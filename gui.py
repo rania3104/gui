@@ -10,6 +10,7 @@ def replace_start_frame():
     # Function to replace the main frame with the replacement frame
     start_frame.pack_forget()
     replacement_frame.pack()
+    
 
 def replace_main_frame():
     replacement_frame.pack_forget()
@@ -18,16 +19,18 @@ def replace_main_frame():
 def reset_indicators():
     for child in options_frame.winfo_children():
         if isinstance(child, Label):
-            child['bg'] = 'SystemButtonFace'
+            child['bg'] = '#41347D'
 
 def switch_indicator(indicator, page):
     reset_indicators()
     if page != replace_start_frame:  # Check if the 'Instructions' button is not clicked
-        indicator['bg'] = 'blue'
+        indicator['bg'] = 'white'
 
-    for frame in main_frame.winfo_children():
-        frame.destroy()
-        replacement_frame.update()
+    for widget in main_frame.winfo_children():
+        # Hide or deactivate the widgets instead of destroying them
+        widget.pack_forget()  # You can use widget.pack() to restore visibility
+
+    replacement_frame.update()
     page()
 
 def quit_application():
@@ -48,14 +51,14 @@ def get_books_data():
         widget.destroy()
 
     # Add a canvas for the books info frame with a vertical scrollbar
-    canvas = Canvas(books_info_frame, bg="white")
+    canvas = Canvas(books_info_frame, bg="#EFD78E", highlightbackground="#EFD78E")
     scrollbar = Scrollbar(books_info_frame, orient="vertical", command=canvas.yview)
     scrollbar.pack(side="right", fill="y")
     canvas.pack(side="left", fill="both", expand=True)
     canvas.configure(yscrollcommand=scrollbar.set)
 
     # Create a new frame to hold the book information
-    books_info_frame_inner = Frame(canvas, bg="white")
+    books_info_frame_inner = Frame(canvas, bg="#EFD78E")
     canvas.create_window((0, 0), window=books_info_frame_inner, anchor="nw")
 
     for i in range(0, len(book)):
@@ -63,36 +66,56 @@ def get_books_data():
         cover_url = book[i]['attributes']['cover']
         cover_response = requests.get(cover_url)
         cover_image = Image.open(BytesIO(cover_response.content))
-        cover_image = cover_image.resize((70, 120))  # Resize the image for display
+        cover_image = cover_image.resize((120, 180))  # Resize the image for display
 
         # Display book cover above the book title
         cover_image = ImageTk.PhotoImage(cover_image)
-        cover_label = Label(books_info_frame_inner, image=cover_image)
+        cover_label = Label(books_info_frame_inner, image=cover_image, bg="#EFD78E")
         cover_label.image = cover_image
         cover_label.grid(row=i // 3 * 5, column=i % 3, pady=2)
 
         # Display book title below the cover
         book_title = book[i]['attributes']['title']
-        book_title_label = Label(books_info_frame_inner, text=book_title, font=('Arial', 10, 'bold'))
-        book_title_label.grid(row=i // 3 * 5 + 1, column=i % 3, pady=2)
+        book_title_label = Label(books_info_frame_inner, text=book_title, font=('Georgia', 10, 'bold'), wraplength=280, bg='#EFD78E')
+        book_title_label.grid(row=i // 3 * 5 + 1, column=i % 3, pady=2, padx=12)
 
         # Display book date below the book title
         book_date = book[i]['attributes']['release_date']
-        book_date_label = Label(books_info_frame_inner, text=book_date, font=('Arial', 8))
+        book_date_label = Label(books_info_frame_inner, text=f"Release Date: {book_date}", font=('Times New Roman', 8), bg="#EFD78E")
         book_date_label.grid(row=i // 3 * 5 + 2, column=i % 3, pady=2)
 
-        # Display book summary below the release date
         book_summary = book[i]['attributes']['summary']
-        book_summary_label = Label(books_info_frame_inner, text=book_summary, font=('Arial', 8), wraplength=250, justify='left')
-        book_summary_label.grid(row=i // 3 * 5 + 3, column=i % 3, pady=2)
+
+        # Create a button to show the summary when clicked
+        show_summary_button = Button(books_info_frame_inner, text=f"Show Summary", font=('Georgia', 8),
+                                     command=lambda i=i, summary=book_summary: show_summary(i, summary),
+                                     bg="#D0A933")  # Set a specific background color (e.g., yellow)
+        show_summary_button.grid(row=i // 3 * 5 + 4, column=i % 3, pady=2, ipadx=20, ipady=5)
 
         # Add an empty space as a separator
-        Label(books_info_frame_inner, text='', font=('Arial', 2)).grid(row=i // 3 * 5 + 4, column=i % 3)
-
     # Update the canvas to include the new frame
     books_info_frame_inner.update_idletasks()
     canvas.config(scrollregion=canvas.bbox("all"))
 
+def show_summary(index, summary):
+    # Create a new frame for displaying the summary
+    summary_frame = Toplevel()
+    summary_frame.title("Book Summary")
+    summary_frame.geometry("400x340")
+    summary_frame.configure(bg="#B09DE4")
+
+    summary_title = Label (summary_frame, text= "SUMMARY", font=('Georgia', 14, 'bold'), bg='#B09DE4')
+    summary_title.pack(pady=10)
+    # Display the book summary
+    summary_label = Label(summary_frame, text=summary, font=('Georgia', 12), wraplength=380, justify='left', bg='#B09DE4')
+    summary_label.pack(pady=10)
+
+    # Add a button to close the summary
+    close_button = Button(summary_frame, text="Close Summary", command=summary_frame.destroy, font=('Georgia', 8), bg="#D0A933")
+    close_button.pack(pady=10, ipady=8, ipadx=7)
+
+    # Update the canvas to include the new frame
+    summary_frame.update_idletasks()
 def get_movies_data():
     url = f"https://api.potterdb.com/v1/movies"
     response = requests.get(url)
@@ -108,14 +131,14 @@ def get_movies_data():
         widget.destroy()
 
     # Add a canvas for the movies info frame with a vertical scrollbar
-    canvas = Canvas(movies_info_frame, bg="white")
+    canvas = Canvas(movies_info_frame, bg="#EFD78E", highlightbackground="#EFD78E")
     scrollbar = Scrollbar(movies_info_frame, orient="vertical", command=canvas.yview)
     scrollbar.pack(side="right", fill="y")
     canvas.pack(side="left", fill="both", expand=True)
     canvas.configure(yscrollcommand=scrollbar.set)
 
     # Create a new frame to hold the movie information
-    movies_info_frame_inner = Frame(canvas, bg="white")
+    movies_info_frame_inner = Frame(canvas, bg="#EFD78E")
     canvas.create_window((0, 0), window=movies_info_frame_inner, anchor="nw")
 
     for i in range(0, len(movie)):
@@ -123,36 +146,36 @@ def get_movies_data():
         poster_url = movie[i]['attributes']['poster']
         poster_response = requests.get(poster_url)
         poster_image = Image.open(BytesIO(poster_response.content))
-        poster_image = poster_image.resize((70, 120))  # Resize the image for display
+        poster_image = poster_image.resize((150, 200))  # Resize the image for display
 
         # Display movie poster above the movie title
         poster_image = ImageTk.PhotoImage(poster_image)
-        poster_label = Label(movies_info_frame_inner, image=poster_image)
+        poster_label = Label(movies_info_frame_inner, image=poster_image, bg='#EFD78E')
         poster_label.image = poster_image
         poster_label.grid(row=i // 3 * 6, column=i % 3, pady=2)
 
         # Display movie title below the poster
         movie_title = movie[i]['attributes']['title']
-        movie_title_label = Label(movies_info_frame_inner, text=movie_title, font=('Arial', 10, 'bold'))
+        movie_title_label = Label(movies_info_frame_inner, text=movie_title, font=('Georgia', 10, 'bold'), wraplength=280, bg='#EFD78E')
         movie_title_label.grid(row=i // 3 * 6 + 1, column=i % 3, pady=2)
 
         # Display movie date below the movie title
         movie_date = movie[i]['attributes']['release_date']
-        movie_date_label = Label(movies_info_frame_inner, text=f"Release Date: {movie_date}", font=('Arial', 8))
+        movie_date_label = Label(movies_info_frame_inner, text=f"Release Date: {movie_date}", font=('Times New Roman', 8), bg="#EFD78E")
         movie_date_label.grid(row=i // 3 * 6 + 2, column=i % 3, pady=2)
         # Display movie directors below the movie date
         movie_directors = ", ".join(movie[i]['attributes']['directors'])
-        movie_directors_label = Label(movies_info_frame_inner, text=f"Directors: {movie_directors}", font=('Arial', 8))
+        movie_directors_label = Label(movies_info_frame_inner, text=f"Directors: {movie_directors}", font=('Times New Roman', 8), bg="#EFD78E")
         movie_directors_label.grid(row=i // 3 * 6 + 3, column=i % 3, pady=2)
 
         # Display movie rating below the movie directors
         movie_rating = movie[i]['attributes']['rating']
-        movie_rating_label = Label(movies_info_frame_inner, text=f"Rating: {movie_rating}", font=('Arial', 8))
+        movie_rating_label = Label(movies_info_frame_inner, text=f"Rating: {movie_rating}", font=('Times New Roman', 8), bg="#EFD78E")
         movie_rating_label.grid(row=i // 3 * 6 + 4, column=i % 3, pady=2)
 
         # Display movie running time below the movie rating
         movie_running_time = movie[i]['attributes']['running_time']
-        movie_running_time_label = Label(movies_info_frame_inner, text=f"Running Time: {movie_running_time}", font=('Arial', 8))
+        movie_running_time_label = Label(movies_info_frame_inner, text=f"Running Time: {movie_running_time}", font=('Times New Roman', 8), bg="#EFD78E")
         movie_running_time_label.grid(row=i // 3 * 6 + 5, column=i % 3, pady=2)
 
 
@@ -191,7 +214,7 @@ def display_no_results_message():
         widget.destroy()
 
     # Add a label to display the "No character found" message
-    no_results_label = Label(characters_info_frame, text="No character found! Make sure the first letter of each name is in upper case", font=('Arial', 14), wraplength=400, justify='center')
+    no_results_label = Label(characters_info_frame, text="No character found! Make sure the first letter of each name is in upper case.", font=('Georgia', 14), wraplength=400, justify='center', bg="#EFD78E")
     no_results_label.pack(pady=50)
 
 def display_search_results(results):
@@ -200,14 +223,14 @@ def display_search_results(results):
         widget.destroy()
 
     # Add a canvas for the characters info frame with a vertical scrollbar
-    canvas = Canvas(characters_info_frame, bg="white")
+    canvas = Canvas(characters_info_frame, bg="#EFD78E", highlightbackground="#EFD78E")
     scrollbar = Scrollbar(characters_info_frame, orient="vertical", command=canvas.yview)
     scrollbar.pack(side="right", fill="y")
     canvas.pack(side="left", fill="both", expand=True)
     canvas.configure(yscrollcommand=scrollbar.set)
 
     # Create a new frame to hold the character information
-    characters_info_frame_inner = Frame(canvas, bg="white")
+    characters_info_frame_inner = Frame(canvas, bg="#EFD78E")
     canvas.create_window((0, 0), window=characters_info_frame_inner, anchor="nw")
 
     for i, result in enumerate(results):
@@ -217,27 +240,27 @@ def display_search_results(results):
         column = i % 2
 
         # Display character name
-        character_name_label = Label(characters_info_frame_inner, text=f"Name: {name}", font=('Arial', 14, 'bold'),wraplength=350)
-        character_name_label.grid(row=i // 2 * 6, column=column * 5, pady=2, padx=10, sticky=W)
+        character_name_label = Label(characters_info_frame_inner, text=f"Name: {name}", font=('Georgia', 14, 'bold'), wraplength=380, bg='#EFD78E')
+        character_name_label.grid(row=i // 2 * 6, column=column * 5, pady=2, padx=14)
 
         # Display character house
-        character_house_label = Label(characters_info_frame_inner, text=f"House: {house}", font=('Arial', 12))
-        character_house_label.grid(row=i // 2 * 6 + 1, column=column * 5, pady=2, padx=10, sticky=W)
+        character_house_label = Label(characters_info_frame_inner, text=f"House: {house}", font=('Times New Roman', 11), bg="#EFD78E")
+        character_house_label.grid(row=i // 2 * 6 + 1, column=column * 5, pady=2, padx=14)
 
         # Display character patronus
-        character_patronus_label = Label(characters_info_frame_inner, text=f"Patronus: {patronus}", font=('Arial', 12))
-        character_patronus_label.grid(row=i // 2 * 6 + 2, column=column * 5, pady=2, padx=10, sticky=W)
+        character_patronus_label = Label(characters_info_frame_inner, text=f"Patronus: {patronus}", font=('Times New Roman', 11), bg="#EFD78E")
+        character_patronus_label.grid(row=i // 2 * 6 + 2, column=column * 5, pady=2, padx=14)
         
         # Display character birthday
-        character_born_label = Label(characters_info_frame_inner, text=f"Born: {born}", font=('Arial', 12),wraplength=350)
-        character_born_label.grid(row=i // 2 * 6 + 3, column=column * 5, pady=2, padx=10, sticky=W)
+        character_born_label = Label(characters_info_frame_inner, text=f"Born: {born}", font=('Times New Roman',11), bg="#EFD78E",wraplength=380)
+        character_born_label.grid(row=i // 2 * 6 + 3, column=column * 5, pady=2, padx=14)
 
         # Display character death day
-        character_death_label = Label(characters_info_frame_inner, text=f"Died: {died}", font=('Arial', 12),wraplength=350)
-        character_death_label.grid(row=i // 2 * 6 + 4, column=column * 5, pady=2, padx=10, sticky=W)
+        character_death_label = Label(characters_info_frame_inner, text=f"Died: {died}", font=('Times New Roman', 11), bg="#EFD78E",wraplength=380)
+        character_death_label.grid(row=i // 2 * 6 + 4, column=column * 5, pady=2, padx=14)
 
         # Add an empty space as a separator
-        Label(characters_info_frame_inner, text='', font=('Arial', 2)).grid(row=i // 2 * 6 + 5, column=column * 5)
+        Label(characters_info_frame_inner, text='', bg="#EFD78E").grid(row=i // 2 * 6 + 5, column=column * 5)
 
     # Update the canvas to include the new frame
     characters_info_frame_inner.update_idletasks()
@@ -269,37 +292,37 @@ def get_random_potion_data():
         potion_image_url = random_potion['image']
         potion_image_response = requests.get(potion_image_url)
         potion_image = Image.open(BytesIO(potion_image_response.content))
-        potion_image = potion_image.resize((350, 350))  # Resize the image for display
+        potion_image = potion_image.resize((360, 350))  # Resize the image for display
 
         potion_image = ImageTk.PhotoImage(potion_image)
-        potion_image_label = Label(potions_info_frame, image=potion_image)
+        potion_image_label = Label(potions_info_frame, image=potion_image, bg='#EFD78E')
         potion_image_label.image = potion_image
-        potion_image_label.grid(row=0, rowspan=6, column=0, padx=10,pady=10)
+        potion_image_label.grid(row=0, rowspan=7, column=0, padx=40,pady=30)
 
         # Display random potion name
         potion_name = random_potion.get('name', 'N/A')
-        potion_name_label = Label(potions_info_frame, text=f"Name: {potion_name}", font=('Arial', 14, 'bold'))
-        potion_name_label.grid(row=1, column=1, columnspan=8, pady=2,padx=10)
+        potion_name_label = Label(potions_info_frame, text=f"Name: {potion_name}", font=('Georgia', 14, 'bold'), wraplength=340, bg='#EFD78E')
+        potion_name_label.grid(row=1, column=1,padx=40)
 
         # Display random potion effect
         potion_effect = random_potion.get('effect', 'N/A')
-        potion_effect_label = Label(potions_info_frame, text=f"Effect: {potion_effect}", font=('Arial', 12), wraplength=390)
-        potion_effect_label.grid(row=2, column=1, columnspan=8, pady=2,padx=10)
+        potion_effect_label = Label(potions_info_frame, text=f"Effect: {potion_effect}", font=('Times New Roman', 11), bg="#EFD78E", wraplength=340)
+        potion_effect_label.grid(row=2, column=1,padx=40)
 
         # Display random potion ingredients
         potion_ingredients = random_potion.get('ingredients', 'N/A')
-        potion_ingredients_label = Label(potions_info_frame, text=f"Ingredients: {potion_ingredients}", font=('Arial', 12), wraplength=390)
-        potion_ingredients_label.grid(row=3, column=1, columnspan=8, pady=2,padx=10)
+        potion_ingredients_label = Label(potions_info_frame, text=f"Ingredients: {potion_ingredients}", font=('Times New Roman', 11), bg="#EFD78E", wraplength=340)
+        potion_ingredients_label.grid(row=3, column=1, padx=40)
 
         # Display random potion characteristics
         potion_characteristics = random_potion.get('characteristics', 'N/A')
-        potion_characteristics_label = Label(potions_info_frame, text=f"Characteristics: {potion_characteristics}", font=('Arial', 12), wraplength=390)
-        potion_characteristics_label.grid(row=4, column=1, columnspan=8, pady=2,padx=10)
+        potion_characteristics_label = Label(potions_info_frame, text=f"Characteristics: {potion_characteristics}", font=('Times New Roman', 11), bg="#EFD78E", wraplength=340)
+        potion_characteristics_label.grid(row=4, column=1, padx=40)
 
         # Display random potion difficulty
         potion_difficulty = random_potion.get('difficulty', 'N/A')
-        potion_difficulty_label = Label(potions_info_frame, text=f"Difficulty: {potion_difficulty}", font=('Arial', 12))
-        potion_difficulty_label.grid(row=5, column=1, columnspan=8, pady=2,padx=10)
+        potion_difficulty_label = Label(potions_info_frame, text=f"Difficulty: {potion_difficulty}", font=('Times New Roman', 11), bg="#EFD78E")
+        potion_difficulty_label.grid(row=5, column=1, padx=40)
 
         # Update the canvas to include the new frame
         potions_info_frame.update_idletasks()
@@ -320,7 +343,7 @@ def get_random_spell_data():
 
     if spells:
         # Choose a random spell
-        random_spell_index = randint(0, len(spells)-1)
+        random_spell_index = randint(1, len(spells)-1)
         random_spell = spells[random_spell_index]['attributes']
 
         # Destroy the existing widgets in spells_info_frame
@@ -331,48 +354,54 @@ def get_random_spell_data():
         spell_image_url = random_spell['image']
         spell_image_response = requests.get(spell_image_url)
         spell_image = Image.open(BytesIO(spell_image_response.content))
-        spell_image = spell_image.resize((350, 350))  # Resize the image for display
+        spell_image = spell_image.resize((360, 350))  # Resize the image for display
 
         spell_image = ImageTk.PhotoImage(spell_image)
-        spell_image_label = Label(spell_info_frame, image=spell_image)
+        spell_image_label = Label(spell_info_frame, image=spell_image, bg='#EFD78E')
         spell_image_label.image = spell_image
-        spell_image_label.grid(row=0, rowspan=6, column=0, padx=10,pady=10)
+        spell_image_label.grid(row=0, rowspan=8, column=0, padx=40,pady=30)
 
         # Display random spell name
         spell_name = random_spell.get('name', 'N/A')
-        spell_name_label = Label(spell_info_frame, text=f"Name: {spell_name}", font=('Arial', 14, 'bold'))
-        spell_name_label.grid(row=1, column=1, columnspan=8, pady=2,padx=10)
+        spell_name_label = Label(spell_info_frame, text=f"Name: {spell_name}", font=('Georgia', 14, 'bold'), wraplength=340, bg='#EFD78E')
+        spell_name_label.grid(row=1, column=1, padx=40)
 
         # Display random spell effect
         spell_effect = random_spell.get('effect', 'N/A')
-        spell_effect_label = Label(spell_info_frame, text=f"Effect: {spell_effect}", font=('Arial', 12),wraplength=390)
-        spell_effect_label.grid(row=2, column=1, columnspan=8, pady=2,padx=10)
+        spell_effect_label = Label(spell_info_frame, text=f"Effect: {spell_effect}", font=('Times New Roman', 11), bg="#EFD78E", wraplength=340)
+        spell_effect_label.grid(row=2, column=1, padx=40)
 
         # Display random spell category
         spell_category = random_spell.get('category', 'N/A')
-        spell_category_label = Label(spell_info_frame, text=f"Category: {spell_category}", font=('Arial', 12),wraplength=390)
-        spell_category_label.grid(row=3, column=1, columnspan=8, pady=2,padx=10)
+        spell_category_label = Label(spell_info_frame, text=f"Category: {spell_category}", font=('Times New Roman', 11), bg="#EFD78E", wraplength=340)
+        spell_category_label.grid(row=3, column=1, padx=40)
 
         # Display random spell light
         spell_light = random_spell.get('light', 'N/A')
-        spell_light_label = Label(spell_info_frame, text=f"Light: {spell_light}", font=('Arial', 12))
-        spell_light_label.grid(row=4, column=1, columnspan=8, pady=2,padx=10)
+        spell_light_label = Label(spell_info_frame, text=f"Light: {spell_light}",font=('Times New Roman', 11), bg="#EFD78E", wraplength=340)
+        spell_light_label.grid(row=4, column=1, padx=40)
 
         # Display random spell incantation
-        spell_incantation = random_spell.get('difficulty', 'N/A')
-        spell_incantation_label = Label(spell_info_frame, text=f"Difficulty: {spell_incantation}", font=('Arial', 12))
-        spell_incantation_label.grid(row=5, column=1, columnspan=8, pady=2,padx=10)
+        spell_incantation = random_spell.get('incantation', 'N/A')
+        spell_incantation_label = Label(spell_info_frame, text=f"Incantation: {spell_incantation}", font=('Times New Roman', 11), bg="#EFD78E", wraplength=340)
+        spell_incantation_label.grid(row=5, column=1, padx=40)
+
+        spell_difficulty = random_spell.get('difficulty', 'N/A')
+        spell_difficulty_label = Label(spell_info_frame, text=f"Difficulty: {spell_difficulty}", font=('Times New Roman', 11), bg="#EFD78E", wraplength=340)
+        spell_difficulty_label.grid(row=6, column=1,padx=40)
 
         # Update the canvas to include the new frame
         spell_info_frame.update_idletasks()
         spell_info_frame.pack_propagate(False)
+        
 root = Tk()
 root.title("Harry Potter World")
 root.geometry("880x600")
 root.resizable(0, 0)
+root.configure(bg='#41347D')
 
 # Create a main frame for the background image
-start_frame = Frame(root, width=880, height=600)
+start_frame = Frame(root, width=880, height=600, bg='#41347D')
 start_frame.pack_propagate(0)  # Disable automatic resizing of the main frame
 start_frame.pack()
 
@@ -384,214 +413,212 @@ background_image = ImageTk.PhotoImage(image)
 background_label = Label(start_frame, image=background_image)
 background_label.place(relwidth=1, relheight=1)
 
-# Create a secondary frame for text and button
-text_frame = Frame(start_frame, bg="white")  # Set background color to white
-text_frame.place(relx=0, rely=0.6, relwidth=1, relheight=0.3)
-
-# Add large text "Harry Potter" to the secondary frame
-title_label = Label(text_frame, text="Harry Potter", font=("Arial", 24), bg="white")
-title_label.pack(pady=10)
-
-# Add smaller text "Find all the information on Harry Potter here!" to the secondary frame
-info_label = Label(text_frame, text="Find all the information on Harry Potter here!", font=("Arial", 12), bg="white")
-info_label.pack()
-
 # Add a button to the secondary frame that calls the replace_main_frame function
-start_button = Button(text_frame, text="Start", font=("Arial", 16), bg="green", fg="white", command=lambda: [replace_start_frame(), reset_indicators()])
-start_button.pack(side=LEFT, padx=10, pady=10)
+start_button = Button(start_frame, text="Start", font=("Andalus", 16), bg="#D0A933", fg="white", command=lambda: [replace_start_frame(), reset_indicators()])
+start_button.place(relx=0.1, rely=0.4, relwidth=0.25)
 
 # Add a Quit button in the same horizontal line
-quit_button = Button(text_frame, text="Quit", font=("Arial", 16), bg="red", fg="white", command=quit_application)
-quit_button.pack(side=LEFT, padx=10, pady=10)
+quit_button = Button(start_frame, text="Quit", font=("Andalus", 16), bg="#D0A933", fg="white", command=quit_application)
+quit_button.place(relx=0.1, rely=0.5, relwidth=0.25)
 
 # Create a replacement frame with the same size
-replacement_frame = Frame(root, width=880, height=600)
+replacement_frame = Frame(root, width=880, height=600, bg="#41347D")
 replacement_frame.pack_propagate(0)  # Disable automatic resizing of the replacement frame
+
 
 options_frame = Frame(replacement_frame)
 
-books_button = Button(options_frame, text="Books", font=('Arial',13), bd=0, fg='blue', activeforeground="blue",
+books_button = Button(options_frame, text="Books", font=('Georgia',14), bd=0, fg='#BFBFBF', activeforeground="white", bg="#41347D",
                       command=lambda: switch_indicator(indicator=books_indicator, page=books_page))
-books_button.place(x=0, y=0, width=160,height=50)
+books_button.place(x=30, y=0, width=160,height=50)
 
 books_indicator= Label(options_frame)
-books_indicator.place(x=40, y=46, width=80, height=3)
+books_indicator.place(x=87, y=46, width=50, height=3)
 
-movies_button = Button(options_frame, text="Movies", font=('Arial',13), bd=0, fg='blue', activeforeground="blue",
+movies_button = Button(options_frame, text="Movies", font=('Georgia',14), bd=0, fg='#BFBFBF', activeforeground="white", bg="#41347D",
                       command=lambda: switch_indicator(indicator=movies_indicator, page=movies_page))
-movies_button.place(x=160, y=0, width=160,height=50)
+movies_button.place(x=190, y=0, width=160,height=50)
 
 movies_indicator= Label(options_frame)
-movies_indicator.place(x=200, y=46, width=80, height=3)
+movies_indicator.place(x=243, y=46, width=57, height=3)
 
-characters_button = Button(options_frame, text="Characters", font=('Arial',13), bd=0, fg='blue', activeforeground="blue",
+characters_button = Button(options_frame, text="Characters", font=('Georgia',14), bd=0, fg='#BFBFBF', activeforeground="white", bg="#41347D",
                       command=lambda: switch_indicator(indicator=characters_indicator, page=characters_page))
-characters_button.place(x=320, y=0, width=160,height=50)
+characters_button.place(x=350, y=0, width=160,height=50)
 
 characters_indicator= Label(options_frame)
-characters_indicator.place(x=360, y=46, width=80, height=3)
+characters_indicator.place(x=390, y=46, width=80, height=3)
 
-potions_button = Button(options_frame, text="Potions", font=('Arial',13), bd=0, fg='blue', activeforeground="blue",
+potions_button = Button(options_frame, text="Potions", font=('Georgia',14), bd=0, fg='#BFBFBF', activeforeground="white", bg="#41347D",
                       command=lambda: switch_indicator(indicator=potions_indicator, page=potions_page))
-potions_button.place(x=480, y=0, width=160,height=50)
+potions_button.place(x=510, y=0, width=160,height=50)
 
 potions_indicator= Label(options_frame)
-potions_indicator.place(x=520, y=46, width=80, height=3)
+potions_indicator.place(x=563, y=46, width=60, height=3)
 
-spells_button = Button(options_frame, text="Spells", font=('Arial',13), bd=0, fg='blue', activeforeground="blue",
+spells_button = Button(options_frame, text="Spells", font=('Georgia',14), bd=0, fg='#BFBFBF', activeforeground="white", bg="#41347D",
                       command=lambda: switch_indicator(indicator=spells_indicator, page=spells_page))
-spells_button.place(x=640, y=0, width=160,height=50)
+spells_button.place(x=670, y=0, width=160,height=50)
 
 spells_indicator= Label(options_frame)
-spells_indicator.place(x=680, y=46, width=80, height=3)
+spells_indicator.place(x=728, y=46, width=47, height=3)
 
 options_frame.pack(pady=5)
 options_frame.pack_propagate(False)
-options_frame.configure(width=800,height=60)
+options_frame.configure(width=880,height=60, bg="#41347D")
+
+main_frame = Frame(replacement_frame)
+main_frame.pack(fill=BOTH, expand=True)
+
+main_frame_image = Image.open('main_frame_background.png')
+main_frame_background_image = ImageTk.PhotoImage(main_frame_image)
+
+# Create a label to display the background image in the main_frame
+main_frame_background_label = Label(main_frame, image=main_frame_background_image)
+main_frame_background_label.place(relwidth=1, relheight=1)
 
 def books_page():
     global books_page_frame, books_info_frame
-    books_page_frame = Frame(main_frame)
+    books_page_frame = Frame(main_frame, bg='#EFD78E')
 
     # Add buttons frame
-    buttons_frame = Frame(books_page_frame)
+    buttons_frame = Frame(books_page_frame, bg='#EFD78E')
     buttons_frame.pack(side=TOP, pady=10)
 
     # Add 'Get Books Data' button
-    get_books_button = Button(buttons_frame, text="Get Books Data", font=('Arial', 12), bg="blue", fg="white", command=get_books_data)
-    get_books_button.pack(side=LEFT, padx=5)
+    get_books_button = Button(buttons_frame, text="Get Books Data", font=('Times New Roman', 14), bg="blue", fg="white", command=get_books_data)
+    get_books_button.pack(side=LEFT,  padx=5, pady=10, ipady=4, ipadx=7)
 
     # Add 'Instructions' button
-    instructions_button = Button(buttons_frame, text="Instructions", font=('Arial', 12), bg="green", fg="white", command=lambda: switch_indicator(indicator=books_indicator, page=replace_start_frame))
-    instructions_button.pack(side=LEFT, padx=5)
+    instructions_button = Button(buttons_frame, text="Instructions", font=('Times New Roman', 14), bg="green", fg="white", command=lambda: switch_indicator(indicator=books_indicator, page=replace_start_frame))
+    instructions_button.pack(side=LEFT,  padx=5, pady=10, ipady=4, ipadx=7)
 
     # Add 'Exit' button
-    exit_button = Button(buttons_frame, text="Exit", font=('Arial', 12), bg="red", fg="white", command=lambda: switch_indicator(indicator=books_indicator, page=replace_main_frame))
-    exit_button.pack(side=LEFT, padx=5)
+    exit_button = Button(buttons_frame, text="Exit", font=('Times New Roman', 14), bg="red", fg="white", command=lambda: switch_indicator(indicator=books_indicator, page=replace_main_frame))
+    exit_button.pack(side=LEFT,  padx=5, pady=10, ipady=4, ipadx=7)
 
     # Add books info frame
-    books_info_frame = Frame(books_page_frame)
+    books_info_frame = Frame(books_page_frame,bg='#EFD78E')
     books_info_frame.pack(fill=BOTH, expand=True)
 
     books_page_frame.pack(fill=BOTH, expand=True)
 
 def movies_page():
     global movies_page_frame, movies_info_frame
-    movies_page_frame = Frame(main_frame)
+    movies_page_frame = Frame(main_frame, bg='#EFD78E')
 
     # Add buttons frame
-    buttons_frame = Frame(movies_page_frame)
+    buttons_frame = Frame(movies_page_frame, bg='#EFD78E')
     buttons_frame.pack(side=TOP, pady=10)
 
     # Add 'Get Movies Data' button
-    get_movies_button = Button(buttons_frame, text="Get Movies Data", font=('Arial', 12), bg="blue", fg="white", command=get_movies_data)
-    get_movies_button.pack(side=LEFT, padx=5)
+    get_movies_button = Button(buttons_frame, text="Get Movies Data", font=('Times New Roman', 14), bg="blue", fg="white", command=get_movies_data)
+    get_movies_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     # Add 'Instructions' button
-    instructions_button = Button(buttons_frame, text="Instructions", font=('Arial', 12), bg="green", fg="white", command=lambda: switch_indicator(indicator=movies_indicator, page=replace_start_frame))
-    instructions_button.pack(side=LEFT, padx=5)
+    instructions_button = Button(buttons_frame, text="Instructions", font=('Times New Roman', 14), bg="green", fg="white", command=lambda: switch_indicator(indicator=movies_indicator, page=replace_start_frame))
+    instructions_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     # Add 'Exit' button
-    exit_button = Button(buttons_frame, text="Exit", font=('Arial', 12), bg="red", fg="white", command=lambda: switch_indicator(indicator=movies_indicator, page=replace_main_frame))
-    exit_button.pack(side=LEFT, padx=5)
+    exit_button = Button(buttons_frame, text="Exit", font=('Times New Roman', 14), bg="red", fg="white", command=lambda: switch_indicator(indicator=movies_indicator, page=replace_main_frame))
+    exit_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     # Add movies info frame
-    movies_info_frame = Frame(movies_page_frame)
+    movies_info_frame = Frame(movies_page_frame, bg='#EFD78E')
     movies_info_frame.pack(fill=BOTH, expand=True)
 
     movies_page_frame.pack(fill=BOTH, expand=True)
 
 def characters_page():
     global characters_info_frame
-    characters_page_frame = Frame(main_frame)
+    characters_page_frame = Frame(main_frame, bg='#EFD78E')
 
     # Add search bar frame
-    search_frame = Frame(characters_page_frame)
-    search_frame.pack(side=TOP, pady=10)
+    search_frame = Frame(characters_page_frame, bg='#EFD78E')
+    search_frame.pack(side=TOP, pady=5)
 
     # Create and pack search label
-    search_label = Label(search_frame, text="Search Character:", font=('Arial', 12))
+    search_label = Label(search_frame, text="Search Character By Name:", font=('Georgia', 14), bg='#EFD78E', wraplength=350)
     search_label.pack(side=LEFT, padx=5)
 
     # Create and pack search entry
     search_entry = Entry(search_frame, font=('Arial', 12), width=30)
-    search_entry.pack(side=LEFT, padx=5)
+    search_entry.pack(side=LEFT, padx=5, pady=10, ipady=8, ipadx=7)
 
     # Create and pack search button
-    search_button = Button(search_frame, text="Search", font=('Arial', 12), bg="blue", fg="white", command=lambda: search_characters(search_entry.get()))
-    search_button.pack(side=LEFT, padx=5)
+    search_button = Button(search_frame, text="Search", font=('Times New Roman', 14), bg="blue", fg="white", command=lambda: search_characters(search_entry.get()))
+    search_button.pack(side=LEFT, padx=5, pady=10, ipady=1, ipadx=7)
 
     # Add buttons frame
-    buttons_frame = Frame(characters_page_frame)
-    buttons_frame.pack(side=TOP, pady=10)
+    buttons_frame = Frame(characters_page_frame, bg='#EFD78E')
+    buttons_frame.pack(side=TOP)
 
     # Add 'Instructions' button
-    instructions_button = Button(buttons_frame, text="Instructions", font=('Arial', 12), bg="green", fg="white", command=lambda: switch_indicator(indicator=characters_indicator, page=replace_start_frame))
-    instructions_button.pack(side=LEFT, padx=5)
+    instructions_button = Button(buttons_frame, text="Instructions", font=('Times New Roman', 14), bg="green", fg="white", command=lambda: switch_indicator(indicator=characters_indicator, page=replace_start_frame))
+    instructions_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     # Add 'Exit' button
-    exit_button = Button(buttons_frame, text="Exit", font=('Arial', 12), bg="red", fg="white", command=lambda: switch_indicator(indicator=characters_indicator, page=replace_main_frame))
-    exit_button.pack(side=LEFT, padx=5)
+    exit_button = Button(buttons_frame, text="Exit", font=('Times New Roman', 14), bg="red", fg="white", command=lambda: switch_indicator(indicator=characters_indicator, page=replace_main_frame))
+    exit_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     # Add characters info frame
-    characters_info_frame = Frame(characters_page_frame)
-    characters_info_frame.pack(fill=BOTH, expand=True)
+    characters_info_frame = Frame(characters_page_frame, bg='#EFD78E')
+    characters_info_frame.pack(fill=BOTH, expand=True, pady=5)
 
     characters_page_frame.pack(fill=BOTH, expand=True)
 
 def potions_page():
     global potions_page_frame, potions_info_frame
-    potions_page_frame = Frame(main_frame)
+    potions_page_frame = Frame(main_frame, bg='#EFD78E')
 
     # Add buttons frame
-    buttons_frame = Frame(potions_page_frame)
+    buttons_frame = Frame(potions_page_frame, bg='#EFD78E')
     buttons_frame.pack(side=TOP, pady=10)
 
     # Add 'Get Random Potions' button
-    get_random_potions_button = Button(buttons_frame, text="Get A Random Potion", font=('Arial', 12), bg="blue", fg="white", command=get_random_potion_data)
-    get_random_potions_button.pack(side=LEFT, padx=5)
+    get_random_potions_button = Button(buttons_frame, text="Get A Random Potion", font=('Times New Roman', 14), bg="blue", fg="white", command=get_random_potion_data)
+    get_random_potions_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     # Add 'Instructions' button
-    instructions_button = Button(buttons_frame, text="Instructions", font=('Arial', 12), bg="green", fg="white", command=lambda: switch_indicator(indicator=potions_indicator, page=replace_start_frame))
-    instructions_button.pack(side=LEFT, padx=5)
+    instructions_button = Button(buttons_frame, text="Instructions", font=('Times New Roman', 14), bg="green", fg="white", command=lambda: switch_indicator(indicator=potions_indicator, page=replace_start_frame))
+    instructions_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     # Add 'Exit' button
-    exit_button = Button(buttons_frame, text="Exit", font=('Arial', 12), bg="red", fg="white", command=lambda: switch_indicator(indicator=potions_indicator, page=replace_main_frame))
-    exit_button.pack(side=LEFT, padx=5)
+    exit_button = Button(buttons_frame, text="Exit", font=('Times New Roman', 14), bg="red", fg="white", command=lambda: switch_indicator(indicator=potions_indicator, page=replace_main_frame))
+    exit_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     # Add potions info frame
-    potions_info_frame = Frame(potions_page_frame)
+    potions_info_frame = Frame(potions_page_frame, bg='#EFD78E')
     potions_info_frame.pack(fill=BOTH, expand=True)
 
     potions_page_frame.pack(fill=BOTH, expand=True)
 
 def spells_page():
     global spells_page_frame, spell_info_frame
-    spells_page_frame = Frame(main_frame)
+    spells_page_frame = Frame(main_frame, bg='#EFD78E')
 
     # Add buttons frame
-    buttons_frame = Frame(spells_page_frame)
+    buttons_frame = Frame(spells_page_frame, bg='#EFD78E')
     buttons_frame.pack(side=TOP, pady=10)
 
     # Add 'Get Random Spell' button
-    get_random_spell_button = Button(buttons_frame, text="Get A Random Spell", font=('Arial', 12), bg="blue", fg="white", command=get_random_spell_data)
-    get_random_spell_button.pack(side=LEFT, padx=5)
+    get_random_spell_button = Button(buttons_frame, text="Get A Random Spell", font=('Times New Roman', 14), bg="blue", fg="white", command=get_random_spell_data)
+    get_random_spell_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     # Add 'Instructions' button
-    instructions_button = Button(buttons_frame, text="Instructions", font=('Arial', 12), bg="green", fg="white", command=lambda: switch_indicator(indicator=spells_indicator, page=replace_start_frame))
-    instructions_button.pack(side=LEFT, padx=5)
+    instructions_button = Button(buttons_frame, text="Instructions", font=('Times New Roman', 14), bg="green", fg="white", command=lambda: switch_indicator(indicator=spells_indicator, page=replace_start_frame))
+    instructions_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     # Add 'Exit' button
-    exit_button = Button(buttons_frame, text="Exit", font=('Arial', 12), bg="red", fg="white", command=lambda: switch_indicator(indicator=spells_indicator, page=replace_main_frame))
-    exit_button.pack(side=LEFT, padx=5)
+    exit_button = Button(buttons_frame, text="Exit", font=('Times New Roman', 14), bg="red", fg="white", command=lambda: switch_indicator(indicator=spells_indicator, page=replace_main_frame))
+    exit_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     # Add spells info frame
-    spell_info_frame = Frame(spells_page_frame)
+    spell_info_frame = Frame(spells_page_frame, bg='#EFD78E')
     spell_info_frame.pack(fill=BOTH, expand=True)
 
     spells_page_frame.pack(fill=BOTH, expand=True)
 
-main_frame = Frame(replacement_frame)
-main_frame.pack(fill=BOTH, expand=True)
+
 
 root.mainloop()
