@@ -1,1920 +1,305 @@
 {
       "data": [
             {
-                  "id": "c8f024e0-8b1a-441b-8138-013fdbf42e3e",
+                  "id": "8d077521-30bc-4b65-b1aa-30528bb59dec",
                   "type": "spell",
                   "attributes": {
-                        "slug": "age-line",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Prevented people above or below a certain age from access to a target",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/e/e5/Age_Line_surrounding_the_Goblet_of_Fire_PM.jpg",
-                        "incantation": null,
-                        "light": "Blue",
-                        "name": "Age Line",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Age_Line"
-                  },
-                  "links": {
-                        "self": "/v1/spells/c8f024e0-8b1a-441b-8138-013fdbf42e3e"
-                  }
-            },
-            {
-                  "id": "7f3b897a-47f8-431e-9447-b9890b1e53dd",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "alarte-ascendare",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Rockets target upward",
-                        "hand": "Brandish wand",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/c/c4/Alarte_Ascendare.gif",
-                        "incantation": "Alarte Ascendare(a-LAR-tay a-SEN-der-ay)",
-                        "light": "Red",
-                        "name": "Alarte Ascendare",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Alarte_Ascendare"
-                  },
-                  "links": {
-                        "self": "/v1/spells/7f3b897a-47f8-431e-9447-b9890b1e53dd"
-                  }
-            },
-            {
-                  "id": "6608dba3-d0a0-4387-939f-5cd01bcd8128",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "albus-dumbledore-s-forceful-spell",
-                        "category": "Spell",
-                        "creator": null,
-                        "effect": "Great force",
-                        "hand": "Flick wand",
-                        "image": null,
-                        "incantation": null,
-                        "light": "None",
-                        "name": "Albus Dumbledore's forceful spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Albus_Dumbledore's_forceful_spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/6608dba3-d0a0-4387-939f-5cd01bcd8128"
-                  }
-            },
-            {
-                  "id": "14319d15-b923-4f93-be40-197b83ab7abc",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "amplifying-charm",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Loudens target",
-                        "hand": "Direct at target",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/2/29/Sonorous_GOF_Dumbledore_1.jpg",
-                        "incantation": "Sonorus(soh-NOHR-us)",
-                        "light": "None",
-                        "name": "Amplifying Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Amplifying_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/14319d15-b923-4f93-be40-197b83ab7abc"
-                  }
-            },
-            {
-                  "id": "01845e07-ae1c-4a34-a836-a14ba7acfc06",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "anapneo",
-                        "category": "Healing spell, Vanishment, Charm",
-                        "creator": null,
-                        "effect": "Cleared target's airway by vanishing blockages",
-                        "hand": "Point wand at target",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/2/2e/Celestina_Warbeck%27s_throat_unblocked_HM.png",
-                        "incantation": "Anapneo(ah-NAP-nee-oh)",
-                        "light": null,
-                        "name": "Anapneo",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Anapneo"
-                  },
-                  "links": {
-                        "self": "/v1/spells/01845e07-ae1c-4a34-a836-a14ba7acfc06"
-                  }
-            },
-            {
-                  "id": "5899b158-5e45-4df7-8234-215a89f442ca",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "animagus-spell",
+                        "slug": "vera-verto",
                         "category": "Transfiguration",
                         "creator": null,
-                        "effect": "Used as part of the ritual to become an Animagus",
-                        "hand": "Place wand tip over caster's heart",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/2/2d/Animagus_Spell_HM.png",
-                        "incantation": "Amato Animo Animato Animagus(ah-MAH-toh ah-NEE-moh ah-nee-MAH-toh an-ah-MAY-jus)",
-                        "light": "Golden",
-                        "name": "Animagus Spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Animagus_Spell"
+                        "effect": "Transformed animals into water goblets",
+                        "hand": null,
+                        "image": "https://static.wikia.nocookie.net/harrypotter/images/e/e4/COS_Vera_Verto_demo.gif",
+                        "incantation": "Vera Verto(vair-uh VAIR-toh)",
+                        "light": "Crystal clear",
+                        "name": "Vera Verto",
+                        "wiki": "https://harrypotter.fandom.com/wiki/Vera_Verto"
                   },
                   "links": {
-                        "self": "/v1/spells/5899b158-5e45-4df7-8234-215a89f442ca"
+                        "self": "/v1/spells/8d077521-30bc-4b65-b1aa-30528bb59dec"
                   }
             },
             {
-                  "id": "9cc7260e-3965-4c8b-b97d-e258c104c5e4",
+                  "id": "7fd390a2-463a-4631-b85c-5ef3ae89a328",
                   "type": "spell",
                   "attributes": {
-                        "slug": "piertotum-locomotor",
+                        "slug": "verdillious",
                         "category": "Charm",
                         "creator": null,
-                        "effect": "Animated target",
-                        "hand": "Point wand at target (when animating individual target), Hold wand aloft or wave (when animating multiple things)",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/e/e5/Piertotum_Locomotor.gif",
-                        "incantation": "Piertotum Locomotor(peer-TOH-tuhm loh-kuh-MOH-tor)",
-                        "light": "None, or green",
-                        "name": "Animation Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Piertotum_Locomotor"
-                  },
-                  "links": {
-                        "self": "/v1/spells/9cc7260e-3965-4c8b-b97d-e258c104c5e4"
-                  }
-            },
-            {
-                  "id": "99289cfd-6218-4c9d-ae88-40ddc070f41a",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "anteoculatia",
-                        "category": "Dark charm",
-                        "creator": null,
-                        "effect": "Grew antlers on head",
+                        "effect": "Caused the wand tip to burn like a sparkler whilst damaging an opponent",
                         "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/f/f7/Anteoculatia_HM.png",
-                        "incantation": "Anteoculatia(an-tee-oh-kyoo-LAY-chee-ah)",
-                        "light": "Red or purple",
-                        "name": "Anteoculatia",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Anteoculatia"
+                        "image": "https://static.wikia.nocookie.net/harrypotter/images/5/52/Verdimillious.jpg",
+                        "incantation": "Verdillious(vur-DILL-ee-us)",
+                        "light": "Green",
+                        "name": "Verdillious",
+                        "wiki": "https://harrypotter.fandom.com/wiki/Verdillious"
                   },
                   "links": {
-                        "self": "/v1/spells/99289cfd-6218-4c9d-ae88-40ddc070f41a"
+                        "self": "/v1/spells/7fd390a2-463a-4631-b85c-5ef3ae89a328"
                   }
             },
             {
-                  "id": "0dec6a4b-d425-401e-a256-fc2edfe6d26d",
+                  "id": "7ecc6559-f8ba-4bca-ae2b-98b38051828c",
                   "type": "spell",
                   "attributes": {
-                        "slug": "anti-apparition-charm",
+                        "slug": "verdimillious-charm",
                         "category": "Charm",
                         "creator": null,
-                        "effect": "Prevents Apparition into an area",
-                        "hand": null,
-                        "image": null,
-                        "incantation": null,
-                        "light": null,
-                        "name": "Anti-Apparition Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Anti-Apparition_Charm"
+                        "effect": "Do damage to opponents, Reveal hidden things",
+                        "hand": "Forwards slash",
+                        "image": "https://static.wikia.nocookie.net/harrypotter/images/0/0c/Verdimillious_Charm_PSG_PS1.png",
+                        "incantation": "Verdimillious(vur-duh-MILL-ee-us)",
+                        "light": "Green",
+                        "name": "Verdimillious Charm",
+                        "wiki": "https://harrypotter.fandom.com/wiki/Verdimillious_Charm"
                   },
                   "links": {
-                        "self": "/v1/spells/0dec6a4b-d425-401e-a256-fc2edfe6d26d"
+                        "self": "/v1/spells/7ecc6559-f8ba-4bca-ae2b-98b38051828c"
                   }
             },
             {
-                  "id": "55e8dfb1-8a2a-4dca-9ab1-d7c108b5699a",
+                  "id": "52445002-7ba2-4fdb-a88d-c641cb042e4c",
                   "type": "spell",
                   "attributes": {
-                        "slug": "anti-cheating-spell",
+                        "slug": "verdimillious-duo-spell",
                         "category": "Charm",
                         "creator": null,
-                        "effect": "Prevents cheating",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/f/fa/Anti-CheatingSpell.png",
-                        "incantation": null,
-                        "light": "Purple",
-                        "name": "Anti-Cheating Spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Anti-Cheating_Spell"
+                        "effect": "Do damage to an opponent, Reveal hidden objects",
+                        "hand": "Forwards slash",
+                        "image": "https://static.wikia.nocookie.net/harrypotter/images/e/e8/Verdimillious_Duo.jpg",
+                        "incantation": "Verdimillious(VUR-duh-MILL-ee-us)",
+                        "light": "Green",
+                        "name": "Verdimillious Duo Spell",
+                        "wiki": "https://harrypotter.fandom.com/wiki/Verdimillious_Duo_Spell"
                   },
                   "links": {
-                        "self": "/v1/spells/55e8dfb1-8a2a-4dca-9ab1-d7c108b5699a"
+                        "self": "/v1/spells/52445002-7ba2-4fdb-a88d-c641cb042e4c"
                   }
             },
             {
-                  "id": "8df8981c-8bf7-4342-9505-5d7a5235a80a",
+                  "id": "ad9b4436-b4ed-4913-8d8b-d64b1d17e49f",
                   "type": "spell",
                   "attributes": {
-                        "slug": "anti-disapparition-jinx",
-                        "category": "Jinx",
-                        "creator": null,
-                        "effect": "Prevented Disapparition within a certain area",
-                        "hand": null,
-                        "image": null,
-                        "incantation": null,
-                        "light": null,
-                        "name": "Anti-Disapparition Jinx",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Anti-Disapparition_Jinx"
-                  },
-                  "links": {
-                        "self": "/v1/spells/8df8981c-8bf7-4342-9505-5d7a5235a80a"
-                  }
-            },
-            {
-                  "id": "e6b85bdd-1196-4497-9e88-b82c9bf97713",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "anti-intruder-jinx",
-                        "category": "Jinx",
-                        "creator": null,
-                        "effect": "Repels intruders",
-                        "hand": null,
-                        "image": null,
-                        "incantation": null,
-                        "light": null,
-                        "name": "Anti-intruder jinxes",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Anti-intruder_jinx"
-                  },
-                  "links": {
-                        "self": "/v1/spells/e6b85bdd-1196-4497-9e88-b82c9bf97713"
-                  }
-            },
-            {
-                  "id": "06dc0a96-aee5-4d61-a88f-3c1d8c207a61",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "antonin-dolohov-s-curse",
-                        "category": "Curse",
-                        "creator": null,
-                        "effect": "Injuries capable of killing",
-                        "hand": "Slashing movement",
-                        "image": null,
-                        "incantation": null,
-                        "light": "Purple fire",
-                        "name": "Antonin Dolohov's curse",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Antonin_Dolohov's_curse"
-                  },
-                  "links": {
-                        "self": "/v1/spells/06dc0a96-aee5-4d61-a88f-3c1d8c207a61"
-                  }
-            },
-            {
-                  "id": "0c0e088e-985f-4157-b747-d722c50cf7ba",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "apparition",
-                        "category": "Magical transportation",
-                        "creator": null,
-                        "effect": "Instantly teleports user",
-                        "hand": "Turn on the spot",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/b/be/Dumbledore_and_Harry_performing_Apparition.gif",
-                        "incantation": "None",
-                        "light": "None",
-                        "name": "Apparition/Disapparition",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Apparition"
-                  },
-                  "links": {
-                        "self": "/v1/spells/0c0e088e-985f-4157-b747-d722c50cf7ba"
-                  }
-            },
-            {
-                  "id": "69d223e9-f206-4360-b16b-7b0bbebebb1a",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "aqua-eructo",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Jet of water",
-                        "hand": "Point wand",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/2/20/Aqua_Eructo.PNG",
-                        "incantation": "Aqua Eructo(A-kwa ee-RUCK-toh)",
-                        "light": "Ice-blue",
-                        "name": "Aqua Eructo",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Aqua_Eructo"
-                  },
-                  "links": {
-                        "self": "/v1/spells/69d223e9-f206-4360-b16b-7b0bbebebb1a"
-                  }
-            },
-            {
-                  "id": "421eb4ea-af79-44bc-bd79-eec724638707",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "arania-exumai",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Repelled spiders",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/3/3e/Arania_Exumai_HM_Spell_Icon.png",
-                        "incantation": "Arania Exumai(ah-RAHN-ee-a EX-oo-may)",
-                        "light": "Blue",
-                        "name": "Arania Exumai",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Arania_Exumai"
-                  },
-                  "links": {
-                        "self": "/v1/spells/421eb4ea-af79-44bc-bd79-eec724638707"
-                  }
-            },
-            {
-                  "id": "bcc55b70-a05d-488e-a237-47aea679f861",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "arrow-shooting-spell",
-                        "category": "Conjuration",
-                        "creator": null,
-                        "effect": "Conjures a shooting arrow from the caster's wand",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/8/82/ArrowShootingSpellHM.png",
-                        "incantation": null,
-                        "light": "None",
-                        "name": "Arrow Shooting Spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Arrow_Shooting_Spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/bcc55b70-a05d-488e-a237-47aea679f861"
-                  }
-            },
-            {
-                  "id": "b017b646-b8a8-433e-98bb-b1aa4d48da5c",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "ascendio",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Lifted caster in air",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/1/1b/NewtAscendio.gif",
-                        "incantation": "Ascendio(ah-SEN-dee-oh)",
-                        "light": "None or blue",
-                        "name": "Ascension Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Ascendio"
-                  },
-                  "links": {
-                        "self": "/v1/spells/b017b646-b8a8-433e-98bb-b1aa4d48da5c"
-                  }
-            },
-            {
-                  "id": "0dfdc7f4-330e-4bbd-af8c-28bb79ae1210",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "avenseguim",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Turns object into tracking device",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/2/28/Avenseguim.gif",
-                        "incantation": "Avenseguim(ah-ven-SEH-gwim)",
-                        "light": "Orange",
-                        "name": "Avenseguim",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Avenseguim"
-                  },
-                  "links": {
-                        "self": "/v1/spells/0dfdc7f4-330e-4bbd-af8c-28bb79ae1210"
-                  }
-            },
-            {
-                  "id": "58e8f967-84a7-46c8-8d11-5c88a87c759c",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "avifors-spell",
+                        "slug": "vermiculus",
                         "category": "Transfiguration, Jinx",
                         "creator": null,
-                        "effect": "Turns objects into birds",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/d/dd/Avifors_icon_HM.png",
-                        "incantation": "Avifors(AH-vi-fors)",
-                        "light": "Blue",
-                        "name": "Avifors Spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Avifors_Spell"
+                        "effect": "Turns things into worms",
+                        "hand": "Point wand",
+                        "image": "https://static.wikia.nocookie.net/harrypotter/images/9/9e/Vermiculus.png",
+                        "incantation": "Vermiculus(vur-MICK-yoo-luhs)",
+                        "light": "Yellow",
+                        "name": "Vermiculus",
+                        "wiki": "https://harrypotter.fandom.com/wiki/Vermiculus"
                   },
                   "links": {
-                        "self": "/v1/spells/58e8f967-84a7-46c8-8d11-5c88a87c759c"
+                        "self": "/v1/spells/ad9b4436-b4ed-4913-8d8b-d64b1d17e49f"
                   }
             },
             {
-                  "id": "a23bf523-eca1-4fd1-870d-bb59b86ae958",
+                  "id": "24a3c62e-e087-4879-8b7f-ec3a1cc18a83",
                   "type": "spell",
                   "attributes": {
-                        "slug": "babbling-curse",
+                        "slug": "versis",
+                        "category": null,
+                        "creator": null,
+                        "effect": null,
+                        "hand": null,
+                        "image": null,
+                        "incantation": "Versis",
+                        "light": null,
+                        "name": "Versis",
+                        "wiki": "https://harrypotter.fandom.com/wiki/Versis"
+                  },
+                  "links": {
+                        "self": "/v1/spells/24a3c62e-e087-4879-8b7f-ec3a1cc18a83"
+                  }
+            },
+            {
+                  "id": "1ad2c532-e634-4ed5-8378-661bd92a9b9e",
+                  "type": "spell",
+                  "attributes": {
+                        "slug": "victor-rookwood-s-curse",
                         "category": "Curse",
                         "creator": null,
-                        "effect": "Uncontrollable babbling",
+                        "effect": "Constant, prolonged pain and agony",
                         "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/b/b7/Babbling_Curse.png",
-                        "incantation": null,
-                        "light": "Yellow",
-                        "name": "Babbling Curse",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Babbling_Curse"
-                  },
-                  "links": {
-                        "self": "/v1/spells/a23bf523-eca1-4fd1-870d-bb59b86ae958"
-                  }
-            },
-            {
-                  "id": "0f56de8e-c943-475a-b7ed-30930e538010",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "badgering",
-                        "category": "Transfiguration",
-                        "creator": null,
-                        "effect": "Turns target human into a badger",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/a/ae/Badgered_Boy.jpg",
+                        "image": null,
                         "incantation": null,
                         "light": null,
-                        "name": "Badgering",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Badgering"
+                        "name": "Victor Rookwood's curse",
+                        "wiki": "https://harrypotter.fandom.com/wiki/Victor_Rookwood's_curse"
                   },
                   "links": {
-                        "self": "/v1/spells/0f56de8e-c943-475a-b7ed-30930e538010"
+                        "self": "/v1/spells/1ad2c532-e634-4ed5-8378-661bd92a9b9e"
                   }
             },
             {
-                  "id": "2c6e9a68-8f8e-4ee3-823f-aa5363ae9e87",
+                  "id": "549aa56b-2aad-4c40-a307-c0cb5d774a40",
                   "type": "spell",
                   "attributes": {
-                        "slug": "bandaging-charm",
-                        "category": "Healing Spell, Charm, Conjuration",
+                        "slug": "vulnera-sanentur",
+                        "category": "Healing spell, Counter-curse, Charm",
                         "creator": null,
-                        "effect": "Bandages target",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/c/cd/Ferula_HM_Spell_Icon.png",
-                        "incantation": "Ferula(fer-ROOL-lah)",
-                        "light": "None",
-                        "name": "Bandaging Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Bandaging_Charm"
+                        "effect": "Slows blood flowClears residueKnits wounds",
+                        "hand": "Trace wand over wounds or",
+                        "image": "https://static.wikia.nocookie.net/harrypotter/images/a/aa/Healing_spell.gif",
+                        "incantation": "Vulnera Sanentur(VUL-ner-ahsah-NEN-tour)",
+                        "light": "None or green",
+                        "name": "Vulnera Sanentur",
+                        "wiki": "https://harrypotter.fandom.com/wiki/Vulnera_Sanentur"
                   },
                   "links": {
-                        "self": "/v1/spells/2c6e9a68-8f8e-4ee3-823f-aa5363ae9e87"
+                        "self": "/v1/spells/549aa56b-2aad-4c40-a307-c0cb5d774a40"
                   }
             },
             {
-                  "id": "01706207-b799-4978-8b98-8aa2d358bc4b",
+                  "id": "b5e2e5b0-1223-457a-8dcb-bbb77f7051ee",
                   "type": "spell",
                   "attributes": {
-                        "slug": "banishing-charm",
+                        "slug": "wand-extinguishing-charm",
+                        "category": "Charm",
+                        "creator": "Levina Monkstanley (1772)",
+                        "effect": "Extinguished wandlight",
+                        "hand": null,
+                        "image": "https://static.wikia.nocookie.net/harrypotter/images/e/ed/SnapeNox.gif",
+                        "incantation": "Nox(NOKSS)",
+                        "light": null,
+                        "name": "Wand-Extinguishing Charm",
+                        "wiki": "https://harrypotter.fandom.com/wiki/Wand-Extinguishing_Charm"
+                  },
+                  "links": {
+                        "self": "/v1/spells/b5e2e5b0-1223-457a-8dcb-bbb77f7051ee"
+                  }
+            },
+            {
+                  "id": "8298090a-eda8-4b8e-998b-25045b14fec3",
+                  "type": "spell",
+                  "attributes": {
+                        "slug": "wand-lighting-charm",
+                        "category": "Charm",
+                        "creator": "Levina Monkstanley (1772)",
+                        "effect": "Illuminates the wand tip",
+                        "hand": null,
+                        "image": "https://static.wikia.nocookie.net/harrypotter/images/4/43/Wand-lighting_charm.gif",
+                        "incantation": "Lumos(LOO-mos)",
+                        "light": "White",
+                        "name": "Wand Lighting Charm",
+                        "wiki": "https://harrypotter.fandom.com/wiki/Wand-Lighting_Charm"
+                  },
+                  "links": {
+                        "self": "/v1/spells/8298090a-eda8-4b8e-998b-25045b14fec3"
+                  }
+            },
+            {
+                  "id": "c9f0bf2d-42dc-47c7-9d38-0cb2be702861",
+                  "type": "spell",
+                  "attributes": {
+                        "slug": "washing-up-spell",
                         "category": "Charm",
                         "creator": null,
-                        "effect": "Sent target away",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/d/db/Depulso.jpg",
-                        "incantation": "Depulso(de-PUHL-so)",
-                        "light": "White, red or yellow",
-                        "name": "Banishing Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Banishing_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/01706207-b799-4978-8b98-8aa2d358bc4b"
-                  }
-            },
-            {
-                  "id": "f726cfc7-bf96-42b2-afdb-c219808a0f48",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "bat-bogey-hex",
-                        "category": "Hex",
-                        "creator": "Miranda Goshawk(mid-20th century)",
-                        "effect": "Transforms target's bogeys into bats that fly out of the victim's nose",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/c/cd/Bat-Bogey_Hex_HM.png",
+                        "effect": "Cleans dishes",
+                        "hand": "Casual flick of wand",
+                        "image": "https://static.wikia.nocookie.net/harrypotter/images/1/1b/Washing_up_spell.gif",
                         "incantation": null,
-                        "light": null,
-                        "name": "Bat-Bogey Hex",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Bat-Bogey_Hex"
+                        "light": "None",
+                        "name": "Washing up spell",
+                        "wiki": "https://harrypotter.fandom.com/wiki/Washing_up_spell"
                   },
                   "links": {
-                        "self": "/v1/spells/f726cfc7-bf96-42b2-afdb-c219808a0f48"
+                        "self": "/v1/spells/c9f0bf2d-42dc-47c7-9d38-0cb2be702861"
                   }
             },
             {
-                  "id": "d9d8b2af-27f5-4edf-82f8-762fc01146ff",
+                  "id": "84c9186f-e750-45bc-b2ec-2b180c7226ad",
                   "type": "spell",
                   "attributes": {
-                        "slug": "baubillious",
+                        "slug": "water-making-spell",
+                        "category": "Charm, Conjuration",
+                        "creator": null,
+                        "effect": "Conjures water",
+                        "hand": null,
+                        "image": "https://static.wikia.nocookie.net/harrypotter/images/e/e4/Aguamenti_PM.png",
+                        "incantation": "Aguamenti(AH-gwah-MEN-tee)",
+                        "light": "Icy blue",
+                        "name": "Water-Making Spell",
+                        "wiki": "https://harrypotter.fandom.com/wiki/Water-Making_Spell"
+                  },
+                  "links": {
+                        "self": "/v1/spells/84c9186f-e750-45bc-b2ec-2b180c7226ad"
+                  }
+            },
+            {
+                  "id": "25fd51ee-c96a-4e1d-a1cb-e27451d3525c",
+                  "type": "spell",
+                  "attributes": {
+                        "slug": "white-sparks",
                         "category": "Charm",
                         "creator": null,
                         "effect": "Jet of white sparks",
                         "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/a/a6/Baubillious.jpg",
-                        "incantation": "Baubillious(baw-BILL-ee-us)",
-                        "light": "White",
-                        "name": "Baubillious",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Baubillious"
-                  },
-                  "links": {
-                        "self": "/v1/spells/d9d8b2af-27f5-4edf-82f8-762fc01146ff"
-                  }
-            },
-            {
-                  "id": "7686bf66-64db-417a-9706-67846afbdaf4",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "bedazzling-hex",
-                        "category": "Hex",
-                        "creator": null,
-                        "effect": "Disguised things",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/d/de/Bedazzling_Hex_HM.png",
-                        "incantation": null,
-                        "light": null,
-                        "name": "Bedazzling Hex",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Bedazzling_Hex"
-                  },
-                  "links": {
-                        "self": "/v1/spells/7686bf66-64db-417a-9706-67846afbdaf4"
-                  }
-            },
-            {
-                  "id": "2ede05f9-9888-4889-91ef-f8a2d44e2f4e",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "bewitched-snowballs",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Bewitches snowballs to follow and harass a designated target",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/f/f5/BewitchedSnowballs.jpg",
-                        "incantation": null,
-                        "light": "None",
-                        "name": "Bewitched Snowballs",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Bewitched_Snowballs"
-                  },
-                  "links": {
-                        "self": "/v1/spells/2ede05f9-9888-4889-91ef-f8a2d44e2f4e"
-                  }
-            },
-            {
-                  "id": "a8108399-93b7-4caa-b3c7-90dcd40eeb84",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "bird-conjuring-charm",
-                        "category": "Charm, Conjuration",
-                        "creator": null,
-                        "effect": "Conjures birds",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/5/5c/Avis.jpg",
-                        "incantation": "Avis(AH-viss)",
-                        "light": "Blue",
-                        "name": "Bird-Conjuring Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Bird-Conjuring_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/a8108399-93b7-4caa-b3c7-90dcd40eeb84"
-                  }
-            },
-            {
-                  "id": "6f3ad7fc-1b52-4880-bafe-3515a1d3f0bf",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "blasting-curse",
-                        "category": "Curse",
-                        "creator": null,
-                        "effect": "Explosion",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/3/30/Blasting_Curse_DHF1.gif",
-                        "incantation": "Confringo(con-FRING-go)",
-                        "light": "Fiery orange",
-                        "name": "Blasting Curse",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Blasting_Curse"
-                  },
-                  "links": {
-                        "self": "/v1/spells/6f3ad7fc-1b52-4880-bafe-3515a1d3f0bf"
-                  }
-            },
-            {
-                  "id": "c251cdfb-2f92-41ec-bf32-689cff4a7795",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "bluebell-flames",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Conjures bluebell flames",
-                        "hand": "Wave wand",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/7/73/BluebellFlames.jpg",
-                        "incantation": "Unknown (At least two words)",
-                        "light": "Bright blue",
-                        "name": "Bluebell Flames",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Bluebell_Flames"
-                  },
-                  "links": {
-                        "self": "/v1/spells/c251cdfb-2f92-41ec-bf32-689cff4a7795"
-                  }
-            },
-            {
-                  "id": "ed72aec1-e8e0-4cf3-8497-40ff361064c7",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "blue-sparks",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Jet of blue sparks",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/b/b2/Blue_Sparks_HM_Spell_Icon.png",
-                        "incantation": null,
-                        "light": "Blue",
-                        "name": "Blue Sparks",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Blue_sparks"
-                  },
-                  "links": {
-                        "self": "/v1/spells/ed72aec1-e8e0-4cf3-8497-40ff361064c7"
-                  }
-            },
-            {
-                  "id": "f1d6bc6f-e5ff-48b4-a23c-883eb2ec0e4a",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "boggart-banishing-spell",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Turned a Boggart into something amusing",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/d/d7/Snape_boggart.gif",
-                        "incantation": "Riddikulus(ri-di-KULL-lis)",
-                        "light": "None",
-                        "name": "Boggart-Banishing Spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Boggart-Banishing_Spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/f1d6bc6f-e5ff-48b4-a23c-883eb2ec0e4a"
-                  }
-            },
-            {
-                  "id": "56278b54-7340-45a5-b377-b93cf86450fa",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "bombarda-maxima",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Powerful explosion",
-                        "hand": "Point wand",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/d/d7/Bombarda_Maxima_HM.png",
-                        "incantation": "Bombarda Maxima(bom-BAR-da MAKS-ee-ma)",
-                        "light": "White or yellow",
-                        "name": "Bombarda Maxima",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Bombarda_Maxima"
-                  },
-                  "links": {
-                        "self": "/v1/spells/56278b54-7340-45a5-b377-b93cf86450fa"
-                  }
-            },
-            {
-                  "id": "14657cd6-9c12-43fa-9372-a4a9e8dce319",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "bombardment-spell",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Small explosion",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/c/ca/Bombarda_HM_Spell_Icon.png",
-                        "incantation": "Bombarda(bom-BAR-da)",
-                        "light": "None",
-                        "name": "Bombardment Spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Bombardment_Spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/14657cd6-9c12-43fa-9372-a4a9e8dce319"
-                  }
-            },
-            {
-                  "id": "4e7ab0fb-8dee-440b-bf30-c324b88626bf",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "bouquet-spell",
-                        "category": "Conjuration",
-                        "creator": null,
-                        "effect": "Conjured flowers",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/9/9a/Orchideous_HM_Spell_Icon.png",
-                        "incantation": "Orchideous(or-KID-ee-us)",
-                        "light": "Pink",
-                        "name": "Bouquet Spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Bouquet_Spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/4e7ab0fb-8dee-440b-bf30-c324b88626bf"
-                  }
-            },
-            {
-                  "id": "6ab23a11-4cc6-4f19-b98d-7baa7768434c",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "box-blasting-charm",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Opens chests",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/e/ef/Cistem_Aperio_HM_Spell_Icon.png",
-                        "incantation": "Cistem Aperio (SEES-tem a-PAIR-ee-oh)",
-                        "light": "White",
-                        "name": "Box Blasting Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Box_Blasting_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/6ab23a11-4cc6-4f19-b98d-7baa7768434c"
-                  }
-            },
-            {
-                  "id": "2767bd4a-e998-4332-9a16-a2c22f7a36b2",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "brackium-emendo",
-                        "category": "Healing spell, Charm",
-                        "creator": null,
-                        "effect": "Removes bones (according to Gilderoy Lockhart, it cures bones)",
-                        "hand": "Point wand",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/c/c0/Brackium_Emendo.gif",
-                        "incantation": "Brackium Emendo(BRAH-kee-um eh-MEN-doh)",
-                        "light": "Blue",
-                        "name": "Brackium Emendo",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Brackium_Emendo"
-                  },
-                  "links": {
-                        "self": "/v1/spells/2767bd4a-e998-4332-9a16-a2c22f7a36b2"
-                  }
-            },
-            {
-                  "id": "580e7a3b-5d25-4db3-815e-484356875b3d",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "bravery-charm",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Enhances teammates against foes",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/8/83/Bravery_Charm_WU.png",
-                        "incantation": null,
-                        "light": null,
-                        "name": "Bravery Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Bravery_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/580e7a3b-5d25-4db3-815e-484356875b3d"
-                  }
-            },
-            {
-                  "id": "04561e75-6368-4eec-a2e3-c356df54329a",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "bridge-conjuring-spell",
-                        "category": "Conjuration",
-                        "creator": null,
-                        "effect": "Conjures bridges",
-                        "hand": "Wave wand",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/8/87/Bridge_conjuring.gif",
-                        "incantation": null,
-                        "light": "None",
-                        "name": "Bridge-conjuring spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Bridge-conjuring_spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/04561e75-6368-4eec-a2e3-c356df54329a"
-                  }
-            },
-            {
-                  "id": "f4aaffe9-d07b-43e9-91c1-2001c78b1862",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "broom-jinx",
-                        "category": "Jinx",
-                        "creator": null,
-                        "effect": "Made a broomstick attempt to buck its rider off",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/3/38/Broom_jinx.gif",
-                        "incantation": null,
-                        "light": null,
-                        "name": "Broom jinx",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Broom_jinx"
-                  },
-                  "links": {
-                        "self": "/v1/spells/f4aaffe9-d07b-43e9-91c1-2001c78b1862"
-                  }
-            },
-            {
-                  "id": "82aae940-cdef-4501-abe0-ffbcf9b1b585",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "bubble-head-charm",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Creates bubble protecting the head",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/9/99/Cedric_Diggory_using_Bubble-Head_Charm_for_the_Tri-wizard_Tournament_2nd_Task_%28Concept_Artwork%29.jpg",
-                        "incantation": null,
-                        "light": "None",
-                        "name": "Bubble-Head Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Bubble-Head_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/82aae940-cdef-4501-abe0-ffbcf9b1b585"
-                  }
-            },
-            {
-                  "id": "374b065b-a3fc-4dda-b9c4-6e1ef99619b5",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "bubble-spell",
-                        "category": "Conjuration",
-                        "creator": null,
-                        "effect": "Created a stream of non-bursting bubbles",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/d/d8/Bubble_Spell_HM.png",
-                        "incantation": null,
-                        "light": "None",
-                        "name": "Bubble Spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Bubble_Spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/374b065b-a3fc-4dda-b9c4-6e1ef99619b5"
-                  }
-            },
-            {
-                  "id": "c46c1702-fcef-4c6a-b2ff-fb81e3875924",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "cantis",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Makes target sing",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/2/2a/Cantis_HM.png",
-                        "incantation": "Cantis(CAN-tis)",
-                        "light": "Pink",
-                        "name": "Cantis",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Cantis"
-                  },
-                  "links": {
-                        "self": "/v1/spells/c46c1702-fcef-4c6a-b2ff-fb81e3875924"
-                  }
-            },
-            {
-                  "id": "a209dfdc-357d-4f8d-994d-25a32704e41c",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "cascading-jinx",
-                        "category": "Jinx",
-                        "creator": null,
-                        "effect": "Attacks multiple enemies",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/d/d3/CascadingJinx.png",
-                        "incantation": null,
-                        "light": "Blue",
-                        "name": "Cascading Jinx",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Cascading_Jinx"
-                  },
-                  "links": {
-                        "self": "/v1/spells/a209dfdc-357d-4f8d-994d-25a32704e41c"
-                  }
-            },
-            {
-                  "id": "25ebbe3e-9f01-4020-8ac8-9bd70c5a6b48",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "caterwauling-charm",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Sets off a high-pitched shriek if entered",
-                        "hand": null,
                         "image": null,
                         "incantation": null,
-                        "light": null,
-                        "name": "Caterwauling Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Caterwauling_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/25ebbe3e-9f01-4020-8ac8-9bd70c5a6b48"
-                  }
-            },
-            {
-                  "id": "0adc8c2f-9479-44a5-8dbd-27fa070235bf",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "cauldron-to-badger-spell",
-                        "category": "Transformation",
-                        "creator": null,
-                        "effect": "Transforms a cauldron into a badger",
-                        "hand": null,
-                        "image": null,
-                        "incantation": null,
-                        "light": null,
-                        "name": "Cauldron to badger",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Cauldron_to_badger_spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/0adc8c2f-9479-44a5-8dbd-27fa070235bf"
-                  }
-            },
-            {
-                  "id": "fdd7d2cc-3483-407e-88f6-015f548a80f6",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "cauldron-to-sieve",
-                        "category": "Transfiguration",
-                        "creator": null,
-                        "effect": "Turns a cauldron into a sieve",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/6/6a/Cauldron_to_Sieve.jpg",
-                        "incantation": null,
-                        "light": null,
-                        "name": "Cauldron to Sieve",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Cauldron_to_Sieve"
-                  },
-                  "links": {
-                        "self": "/v1/spells/fdd7d2cc-3483-407e-88f6-015f548a80f6"
-                  }
-            },
-            {
-                  "id": "1fadab6b-faa4-4e44-99f5-850b474e53f6",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "cave-inimicum",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Concealment",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/c/cf/Cave_Inimicum_HM.png",
-                        "incantation": "Cave inimicum(CAH-vay uh-NIM-i-kuhm)",
-                        "light": "None (haze)",
-                        "name": "Cave inimicum",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Cave_inimicum"
-                  },
-                  "links": {
-                        "self": "/v1/spells/1fadab6b-faa4-4e44-99f5-850b474e53f6"
-                  }
-            },
-            {
-                  "id": "9b045341-2c30-4305-b5c3-11a86cde811f",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "cheering-charm",
-                        "category": "Charm",
-                        "creator": "Felix Summerbee (1447-1508)",
-                        "effect": "Created joy and contentment",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/5/56/Cheering_Charm_HM_Spell_Icon.png",
-                        "incantation": null,
-                        "light": "None",
-                        "name": "Cheering Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Cheering_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/9b045341-2c30-4305-b5c3-11a86cde811f"
-                  }
-            },
-            {
-                  "id": "2891d661-8dd6-4b62-8885-a101403a1a0e",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "circumrota",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Rotates an object",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/a/aa/Circumrota.gif",
-                        "incantation": "Circumrota(SIR-cum-roh-tuh)",
-                        "light": null,
-                        "name": "Circumrota",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Circumrota"
-                  },
-                  "links": {
-                        "self": "/v1/spells/2891d661-8dd6-4b62-8885-a101403a1a0e"
-                  }
-            },
-            {
-                  "id": "7918adc6-9f24-4498-b352-dbc34e622dd8",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "colour-change-charm",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Changes colour of target",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/3/37/Colovaria_HM_Spell_Icon.png",
-                        "incantation": "Colovaria(co-loh-VA-ree-ah)",
-                        "light": "None",
-                        "name": "Colour Change Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Colour_Change_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/7918adc6-9f24-4498-b352-dbc34e622dd8"
-                  }
-            },
-            {
-                  "id": "1b5caa66-fca1-408a-a61c-5a927a9bd5aa",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "combat-bolt",
-                        "category": "Spell",
-                        "creator": null,
-                        "effect": "Offensive spell; injured the target",
-                        "hand": null,
-                        "image": null,
-                        "incantation": null,
-                        "light": "Blue",
-                        "name": "Combat Bolt",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Combat_Bolt"
-                  },
-                  "links": {
-                        "self": "/v1/spells/1b5caa66-fca1-408a-a61c-5a927a9bd5aa"
-                  }
-            },
-            {
-                  "id": "c89cfe66-0d3b-4871-87a1-55092fbbf437",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "confundus-charm",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Confuses the target",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/f/f1/NewtConfundus.gif",
-                        "incantation": "Confundo(con-FUN-doe)",
-                        "light": "Pink",
-                        "name": "Confundus Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Confundus_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/c89cfe66-0d3b-4871-87a1-55092fbbf437"
-                  }
-            },
-            {
-                  "id": "a20504b0-63f5-4542-85bf-0b64b9094074",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "conjunctivitis-curse",
-                        "category": "Curse",
-                        "creator": null,
-                        "effect": "Irritated eyes",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/7/78/Conjunctivitis_Curse.gif",
-                        "incantation": null,
-                        "light": "None or purple",
-                        "name": "Conjunctivitis Curse",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Conjunctivitis_Curse"
-                  },
-                  "links": {
-                        "self": "/v1/spells/a20504b0-63f5-4542-85bf-0b64b9094074"
-                  }
-            },
-            {
-                  "id": "9a075bb1-ae31-47de-813c-6c44b3a6fb0a",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "cornflake-skin-spell",
-                        "category": "Jinx",
-                        "creator": null,
-                        "effect": "Made skin appear like cornflakes",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/7/72/Cornflake_Skin_Jinx_icon_HM.png",
-                        "incantation": null,
-                        "light": "Yellow",
-                        "name": "Cornflake Skin Jinx",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Cornflake_skin_spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/9a075bb1-ae31-47de-813c-6c44b3a6fb0a"
-                  }
-            },
-            {
-                  "id": "6eef61ee-e379-4af0-98ff-a04e7a719002",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "cracker-jinx",
-                        "category": "Jinx, Conjuration",
-                        "creator": null,
-                        "effect": "Conjures exploding Wizard Crackers",
-                        "hand": null,
-                        "image": null,
-                        "incantation": null,
-                        "light": null,
-                        "name": "Cracker Jinx",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Cracker_Jinx"
-                  },
-                  "links": {
-                        "self": "/v1/spells/6eef61ee-e379-4af0-98ff-a04e7a719002"
-                  }
-            },
-            {
-                  "id": "269611f4-2097-4e33-9f89-448be22abd18",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "cribbing-spell",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Assists the caster in cheating on written papers",
-                        "hand": null,
-                        "image": null,
-                        "incantation": null,
-                        "light": null,
-                        "name": "Cribbing Spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Cribbing_Spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/269611f4-2097-4e33-9f89-448be22abd18"
-                  }
-            },
-            {
-                  "id": "d02cc356-5fca-48b4-b775-3ac291aff822",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "crinus-muto",
-                        "category": "Transfiguration",
-                        "creator": null,
-                        "effect": "Transforms hair",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/9/92/Crinus_Muto.png",
-                        "incantation": "Crinus Muto(CREE-nus MYOO-toh)",
                         "light": "White",
-                        "name": "Crinus Muto",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Crinus_Muto"
+                        "name": "White sparks",
+                        "wiki": "https://harrypotter.fandom.com/wiki/White_sparks"
                   },
                   "links": {
-                        "self": "/v1/spells/d02cc356-5fca-48b4-b775-3ac291aff822"
+                        "self": "/v1/spells/25fd51ee-c96a-4e1d-a1cb-e27451d3525c"
                   }
             },
             {
-                  "id": "e80e93e1-2a8e-4950-a914-27b0dd71581b",
+                  "id": "fe94367f-2fc9-4678-976e-762cf9e19016",
                   "type": "spell",
                   "attributes": {
-                        "slug": "cruciatus-curse",
-                        "category": "Curse",
-                        "creator": null,
-                        "effect": "Excruciating pain, insanity if victim was subjected for too long",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/9/9c/Voldemort_crucio_harry.gif",
-                        "incantation": "Crucio (KROO-see-oh)",
-                        "light": "None",
-                        "name": "Cruciatus Curse",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Cruciatus_Curse"
-                  },
-                  "links": {
-                        "self": "/v1/spells/e80e93e1-2a8e-4950-a914-27b0dd71581b"
-                  }
-            },
-            {
-                  "id": "a110d600-145c-40e5-93c7-866a762cbd73",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "curse-of-the-bogies",
-                        "category": "Curse",
-                        "creator": null,
-                        "effect": "Nasty cold and an extremely runny nose",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/a/a0/CurseOfTheBogiesHM.png",
-                        "incantation": "Mucus ad Nauseam(MYOO-kus ahd NAW-zee-um)",
-                        "light": "Green",
-                        "name": "Curse of the Bogies",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Curse_of_the_Bogies"
-                  },
-                  "links": {
-                        "self": "/v1/spells/a110d600-145c-40e5-93c7-866a762cbd73"
-                  }
-            },
-            {
-                  "id": "ad04ba01-6014-469f-8e2d-ced50b339085",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "cushioning-charm",
-                        "category": "Charm",
-                        "creator": "Elliot Smethwyck (1820)",
-                        "effect": "Places a cushioning effect on an object",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/a/a3/Effects_of_Cushioning_Charm.jpg",
-                        "incantation": "Molliare(mul-lee-AR-ray)",
-                        "light": null,
-                        "name": "Cushioning Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Cushioning_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/ad04ba01-6014-469f-8e2d-ced50b339085"
-                  }
-            },
-            {
-                  "id": "779086e1-bb98-497a-97d2-93cc6abf174f",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "dancing-feet-spell",
+                        "slug": "windy-spell",
                         "category": "Charm",
                         "creator": null,
-                        "effect": "Sent legs out of control",
+                        "effect": "Jet of spiralling wind",
                         "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/e/e6/Tarantallegra.gif",
-                        "incantation": "Tarantallegra(ta-RON-ta-LEG-gra)",
-                        "light": "Red or purple",
-                        "name": "Dancing Feet Spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Dancing_Feet_Spell"
+                        "image": "https://static.wikia.nocookie.net/harrypotter/images/4/46/Ventus2.gif",
+                        "incantation": "Ventus(VEN-tuss)",
+                        "light": "Grey",
+                        "name": "Windy Spell",
+                        "wiki": "https://harrypotter.fandom.com/wiki/Windy_Spell"
                   },
                   "links": {
-                        "self": "/v1/spells/779086e1-bb98-497a-97d2-93cc6abf174f"
+                        "self": "/v1/spells/fe94367f-2fc9-4678-976e-762cf9e19016"
                   }
             },
             {
-                  "id": "669fc223-eadc-4815-aed5-af74f13c3f3d",
+                  "id": "69e085f5-69a1-46cc-9f52-b85c7de1603a",
                   "type": "spell",
                   "attributes": {
-                        "slug": "dangling-jinx",
-                        "category": "Jinx",
-                        "creator": "Severus Snape",
-                        "effect": "Suspends people by the ankles in the air",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/4/43/Levicorpus1.gif",
-                        "incantation": "Levicorpus(leh-vee-COR-pus)",
-                        "light": "Green",
-                        "name": "Dangling Jinx",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Dangling_Jinx"
-                  },
-                  "links": {
-                        "self": "/v1/spells/669fc223-eadc-4815-aed5-af74f13c3f3d"
-                  }
-            },
-            {
-                  "id": "fb4c050a-b08e-43ab-825d-7c895308d8af",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "densaugeo",
-                        "category": "Hex",
-                        "creator": null,
-                        "effect": "Elongates teeth",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/4/40/Densaugeo_Pottermore.png",
-                        "incantation": "Densaugeo(den-SAU-jee-oh)",
-                        "light": "Violet",
-                        "name": "Densaugeo",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Densaugeo"
-                  },
-                  "links": {
-                        "self": "/v1/spells/fb4c050a-b08e-43ab-825d-7c895308d8af"
-                  }
-            },
-            {
-                  "id": "a75f45ef-8469-48de-82e8-3b1b0517eccb",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "deprimo",
+                        "slug": "wiping-spell",
                         "category": "Charm",
                         "creator": null,
-                        "effect": "Blasts holes in ground",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/b/be/DeprimoHM.png",
-                        "incantation": "Deprimo(deh-PREEM-oh)",
-                        "light": "Green or none",
-                        "name": "Deprimo Spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Deprimo"
-                  },
-                  "links": {
-                        "self": "/v1/spells/a75f45ef-8469-48de-82e8-3b1b0517eccb"
-                  }
-            },
-            {
-                  "id": "6789ffcd-8fd9-47fa-aff3-e021fd262f5b",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "descendo",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Lowers target",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/d/d3/DescendoHM.png",
-                        "incantation": "Descendo(deh-SEHN-doh)",
-                        "light": "Blue",
-                        "name": "Descendo",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Descendo"
-                  },
-                  "links": {
-                        "self": "/v1/spells/6789ffcd-8fd9-47fa-aff3-e021fd262f5b"
-                  }
-            },
-            {
-                  "id": "50206070-41ae-4aac-b908-a6bc61ff3c49",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "desk-into-pig",
-                        "category": "Transfiguration",
-                        "creator": null,
-                        "effect": "Transfigures desks into pigs",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/5/5b/DeskIntoPig.jpg",
-                        "incantation": null,
-                        "light": null,
-                        "name": "Desk Into Pig",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Desk_Into_Pig"
-                  },
-                  "links": {
-                        "self": "/v1/spells/50206070-41ae-4aac-b908-a6bc61ff3c49"
-                  }
-            },
-            {
-                  "id": "f1cdd37a-981d-47d0-b738-40f860907cf1",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "deterioration-hex",
-                        "category": "Hex",
-                        "creator": null,
-                        "effect": "Impairs foes",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/7/70/Deterioration_Hex.png",
-                        "incantation": null,
-                        "light": null,
-                        "name": "Deterioration Hex",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Deterioration_Hex"
-                  },
-                  "links": {
-                        "self": "/v1/spells/f1cdd37a-981d-47d0-b738-40f860907cf1"
-                  }
-            },
-            {
-                  "id": "a4327c80-1d93-426c-922e-e62f64976e19",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "diminuendo",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Shrunk objects and humans",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/8/8c/Diminuendo_1.gif",
-                        "incantation": "Diminuendo(dim-IN-you-end-oh)",
-                        "light": "White or yellow",
-                        "name": "Diminuendo",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Diminuendo"
-                  },
-                  "links": {
-                        "self": "/v1/spells/a4327c80-1d93-426c-922e-e62f64976e19"
-                  }
-            },
-            {
-                  "id": "4f52634c-4a80-4170-898f-d5a274505a04",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "disarming-charm",
-                        "category": "Charm",
-                        "creator": "Elizabeth Smudgling or Merlin (possibly)",
-                        "effect": "Disarms an opponent",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/9/96/Snape_disarming_Lockhart_COS.gif",
-                        "incantation": "Expelliarmus(ex-PEL-lee-ar-muss)",
-                        "light": "Scarlet",
-                        "name": "Disarming Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Disarming_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/4f52634c-4a80-4170-898f-d5a274505a04"
-                  }
-            },
-            {
-                  "id": "a2a7c2be-ac7a-4c75-ae9f-16dba73c0536",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "surgito",
-                        "category": "Charm, Counter-charm",
-                        "creator": null,
-                        "effect": "Removed enchantments",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/7/7e/Surgito.gif",
-                        "incantation": "Surgito(SUR-jee-toh)",
-                        "light": "White",
-                        "name": "Disenchantment Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Surgito"
-                  },
-                  "links": {
-                        "self": "/v1/spells/a2a7c2be-ac7a-4c75-ae9f-16dba73c0536"
-                  }
-            },
-            {
-                  "id": "6a4b8dae-9402-418b-b372-a13c6b53d424",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "disillusionment-charm",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Disguised target as surroundings",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/b/b7/DisillusionmentCharmHM.png",
-                        "incantation": null,
-                        "light": "White",
-                        "name": "Disillusionment Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Disillusionment_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/6a4b8dae-9402-418b-b372-a13c6b53d424"
-                  }
-            },
-            {
-                  "id": "3d07e312-2400-46f6-8188-4349a0989be7",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "disintegration-spell",
-                        "category": "Dark charm",
-                        "creator": null,
-                        "effect": "Blew up and disintegrated the target",
+                        "effect": "Cleans up objects",
                         "hand": "Point wand at target",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/d/de/Bellatrix_death.gif",
-                        "incantation": null,
-                        "light": "Red",
-                        "name": "Disintegration spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Disintegration_spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/3d07e312-2400-46f6-8188-4349a0989be7"
-                  }
-            },
-            {
-                  "id": "9157dfde-a73f-431e-b879-9142f0038126",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "doubling-charm",
-                        "category": "Charm, Curse",
-                        "creator": "Helixa and Syna Hyslop",
-                        "effect": "Duplicated an object",
-                        "hand": "Flick wand at target",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/5/5f/Gemino_Curse.gif",
-                        "incantation": "Geminio(juh-MIN-ee-oh)",
+                        "image": "https://static.wikia.nocookie.net/harrypotter/images/2/29/TergeoPAS.png",
+                        "incantation": "Tergeo(ter-GEE-o)",
                         "light": "None",
-                        "name": "Doubling Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Doubling_Charm"
+                        "name": "Wiping Spell",
+                        "wiki": "https://harrypotter.fandom.com/wiki/Wiping_Spell"
                   },
                   "links": {
-                        "self": "/v1/spells/9157dfde-a73f-431e-b879-9142f0038126"
-                  }
-            },
-            {
-                  "id": "dfddff8c-44e5-486d-9eab-6f3374e4a145",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "draconifors-spell",
-                        "category": "Transfiguration",
-                        "creator": null,
-                        "effect": "Turns object into dragon",
-                        "hand": "Slash wand at target",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/3/35/DraconiforsPAS.png",
-                        "incantation": "Draconifors(drah-KON-i-fors)",
-                        "light": "Fiery orange",
-                        "name": "Draconifors Spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Draconifors_Spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/dfddff8c-44e5-486d-9eab-6f3374e4a145"
-                  }
-            },
-            {
-                  "id": "9cabb812-5fd2-440a-b033-13f6d2cd43d4",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "drought-charm",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Dried up small bodies of water",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/f/fd/DroughtCharmHM.png",
-                        "incantation": null,
-                        "light": "None",
-                        "name": "Drought Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Drought_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/9cabb812-5fd2-440a-b033-13f6d2cd43d4"
-                  }
-            },
-            {
-                  "id": "ea0dcb57-a7ee-4df7-a833-73d82e9f89c8",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "ducklifors",
-                        "category": "Transfiguration, Jinx",
-                        "creator": null,
-                        "effect": "Turned organisms into ducks",
-                        "hand": "Downward slash",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/8/8d/Ducklifors.png",
-                        "incantation": "Ducklifors",
-                        "light": "Yellow or purple",
-                        "name": "Ducklifors",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Ducklifors"
-                  },
-                  "links": {
-                        "self": "/v1/spells/ea0dcb57-a7ee-4df7-a833-73d82e9f89c8"
-                  }
-            },
-            {
-                  "id": "fc4dfd78-1a99-4931-9273-710ce6fd9b4f",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "dumbledore-s-army-parchment-jinx",
-                        "category": "Jinx",
-                        "creator": null,
-                        "effect": "Caused boils to spell 'SNEAK' on the face of a traitor",
-                        "hand": null,
-                        "image": null,
-                        "incantation": null,
-                        "light": null,
-                        "name": "Dumbledore's Army parchment jinx",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Dumbledore's_Army_parchment_jinx"
-                  },
-                  "links": {
-                        "self": "/v1/spells/fc4dfd78-1a99-4931-9273-710ce6fd9b4f"
-                  }
-            },
-            {
-                  "id": "b476e553-c5ac-4ff7-8c31-f62332ce364c",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "ear-shrivelling-curse",
-                        "category": "Curse",
-                        "creator": null,
-                        "effect": "Caused ears to shrivel up",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/d/db/EarShrivellingCurseHM.png",
-                        "incantation": null,
-                        "light": "None",
-                        "name": "Ear-Shrivelling Curse",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Ear-shrivelling_Curse"
-                  },
-                  "links": {
-                        "self": "/v1/spells/b476e553-c5ac-4ff7-8c31-f62332ce364c"
-                  }
-            },
-            {
-                  "id": "10ee3341-031c-402f-8f7a-8d7ab29933d2",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "ears-to-kumquats-spell",
-                        "category": "Transfiguration",
-                        "creator": null,
-                        "effect": "Transforms target's ears into kumquats",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/0/0f/Ears_To_Kumquats_spell.png",
-                        "incantation": null,
-                        "light": null,
-                        "name": "Ears to kumquats",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Ears_to_kumquats_spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/10ee3341-031c-402f-8f7a-8d7ab29933d2"
-                  }
-            },
-            {
-                  "id": "cf3b69a8-553a-4042-a995-0c88e942cbda",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "ebublio-jinx",
-                        "category": "Jinx",
-                        "creator": null,
-                        "effect": "Traps target in giant bubble",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/4/4f/EbublioJinxHM.png",
-                        "incantation": "Ebublio(ee-BUB-leo)",
-                        "light": "Blue",
-                        "name": "Ebublio Jinx",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Ebublio_Jinx"
-                  },
-                  "links": {
-                        "self": "/v1/spells/cf3b69a8-553a-4042-a995-0c88e942cbda"
-                  }
-            },
-            {
-                  "id": "218c5356-8764-4460-93b9-9537497533fd",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "engorgement-charm",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Caused swelling",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/6/62/Harry_casting_Engorgio.gif",
-                        "incantation": "Engorgio (en-GOR-gee-oh)",
-                        "light": "Icy blue",
-                        "name": "Engorgement Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Engorgement_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/218c5356-8764-4460-93b9-9537497533fd"
-                  }
-            },
-            {
-                  "id": "2026b032-cdc7-41ee-850a-1bd8f0e67ca0",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "engorgio-skullus",
-                        "category": "Dark charm",
-                        "creator": null,
-                        "effect": "Swells head",
-                        "hand": "Point wand",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/0/01/Engorgio_skullus.jpg",
-                        "incantation": "Engorgio Skullus(in-GORE-jee-oh SKULL-us)",
-                        "light": "Red or Purple",
-                        "name": "Engorgio Skullus",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Engorgio_Skullus"
-                  },
-                  "links": {
-                        "self": "/v1/spells/2026b032-cdc7-41ee-850a-1bd8f0e67ca0"
-                  }
-            },
-            {
-                  "id": "9d6c418e-9258-41a3-9d71-85673ab8c634",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "entrail-expelling-curse",
-                        "category": "Curse, Healing spell",
-                        "creator": "Urquhart Rackharrow (1600s)",
-                        "effect": "Expels entrails (presumably)",
-                        "hand": null,
-                        "image": null,
-                        "incantation": null,
-                        "light": null,
-                        "name": "Entrail-Expelling Curse",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Entrail-Expelling_Curse"
-                  },
-                  "links": {
-                        "self": "/v1/spells/9d6c418e-9258-41a3-9d71-85673ab8c634"
-                  }
-            },
-            {
-                  "id": "7e15cb75-2833-4af7-97c5-ccd093bac54c",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "episkey",
-                        "category": "Healing spell, Charm",
-                        "creator": null,
-                        "effect": "Heals minor injuries",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/b/b8/Episkey_HM_Spell_Icon.png",
-                        "incantation": "Episkey(eh-PIS-kee)",
-                        "light": "None",
-                        "name": "Episkey",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Episkey"
-                  },
-                  "links": {
-                        "self": "/v1/spells/7e15cb75-2833-4af7-97c5-ccd093bac54c"
-                  }
-            },
-            {
-                  "id": "9684fb9b-a1a1-40e0-a2ab-3827fe7b3499",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "epoximise",
-                        "category": "Transfiguration",
-                        "creator": null,
-                        "effect": "Bonded two objects together",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/7/7a/Epoximise.jpg",
-                        "incantation": "Epoximise(ee-POX-i-mise)",
-                        "light": null,
-                        "name": "Epoximise",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Epoximise"
-                  },
-                  "links": {
-                        "self": "/v1/spells/9684fb9b-a1a1-40e0-a2ab-3827fe7b3499"
-                  }
-            },
-            {
-                  "id": "1e813c8f-bde3-4cb1-8d0f-d70a10aea18b",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "eradication-spell",
-                        "category": "Charm, Counter-charm",
-                        "creator": null,
-                        "effect": "Disintegrated objects and images",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/4/4e/Deletrius_HM_Spell_Icon.png",
-                        "incantation": "Deletrius(de-LEE-tree-us)",
-                        "light": "None",
-                        "name": "Eradication Spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Eradication_Spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/1e813c8f-bde3-4cb1-8d0f-d70a10aea18b"
-                  }
-            },
-            {
-                  "id": "4cce4ef2-1994-4422-afbc-5602d36bce2a",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "erecto",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Erects a structure",
-                        "hand": "Point wand at target",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/2/2c/Ereto1.gif",
-                        "incantation": "Erecto(uh-REK-toh)",
-                        "light": "None",
-                        "name": "Erecto",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Erecto"
-                  },
-                  "links": {
-                        "self": "/v1/spells/4cce4ef2-1994-4422-afbc-5602d36bce2a"
-                  }
-            },
-            {
-                  "id": "7c1168b2-f97f-461d-b1bd-82469897c619",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "evanesce",
-                        "category": "Transfiguration",
-                        "creator": null,
-                        "effect": "Vanished objects",
-                        "hand": "Point wand at target",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/d/d6/Evanesce1.jpg",
-                        "incantation": "Evanesce",
-                        "light": "Bluish-white",
-                        "name": "Evanesce",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Evanesce"
-                  },
-                  "links": {
-                        "self": "/v1/spells/7c1168b2-f97f-461d-b1bd-82469897c619"
-                  }
-            },
-            {
-                  "id": "e4acaa37-7366-4f44-8528-f4dc04768caf",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "everte-statum",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Makes opponent stumble, Causes sharp pain",
-                        "hand": "Point wand at victim",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/7/7f/Everte_Statum.gif",
-                        "incantation": "Everte Statum(ee-VER-tay STAH-tum)",
-                        "light": "Orange",
-                        "name": "Everte Statum",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Everte_Statum"
-                  },
-                  "links": {
-                        "self": "/v1/spells/e4acaa37-7366-4f44-8528-f4dc04768caf"
-                  }
-            },
-            {
-                  "id": "ce390945-20e9-4dbb-9d05-af20165af8b2",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "expulso-curse",
-                        "category": "Curse",
-                        "creator": null,
-                        "effect": "Caused powerful explosions",
-                        "hand": "Point wand",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/a/aa/Expulso.JPG",
-                        "incantation": "Expulso(ecks-SPUHL-soh)",
-                        "light": "Blue",
-                        "name": "Expulso Curse",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Expulso_Curse"
-                  },
-                  "links": {
-                        "self": "/v1/spells/ce390945-20e9-4dbb-9d05-af20165af8b2"
-                  }
-            },
-            {
-                  "id": "c1447060-6ff1-421b-aeab-f7d6f589a004",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "extension-charm",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Increases interior space of object",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/7/75/Extension_charm.gif",
-                        "incantation": "Capacious extremis(ca-PAY-shusex-TREEM-us)",
-                        "light": null,
-                        "name": "Extension Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Extension_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/c1447060-6ff1-421b-aeab-f7d6f589a004"
-                  }
-            },
-            {
-                  "id": "db2844c8-16e2-42b1-9f70-d0bf7d19e7e8",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "extinguishing-spell",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Extinguished fires",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/3/3e/Extinguishing_Charm_HM_Icon.png",
-                        "incantation": null,
-                        "light": "None",
-                        "name": "Extinguishing Spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Extinguishing_Spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/db2844c8-16e2-42b1-9f70-d0bf7d19e7e8"
-                  }
-            },
-            {
-                  "id": "245600fc-a445-4d0f-a849-0919afc4a8e1",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "false-memory-spell",
-                        "category": "Spell",
-                        "creator": "Mnemone Radford c. 1900s (possibly)",
-                        "effect": "Implanted a false memory in the victim's mind",
-                        "hand": null,
-                        "image": null,
-                        "incantation": null,
-                        "light": null,
-                        "name": "False memory spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/False_memory_spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/245600fc-a445-4d0f-a849-0919afc4a8e1"
-                  }
-            },
-            {
-                  "id": "d44645c0-97c6-4ef2-a8dd-4b4f109d0274",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "feather-light-charm",
-                        "category": "Charm",
-                        "creator": "Cressida Blume",
-                        "effect": "Minimises object's weight",
-                        "hand": null,
-                        "image": null,
-                        "incantation": null,
-                        "light": null,
-                        "name": "Feather-light charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Feather-light_charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/d44645c0-97c6-4ef2-a8dd-4b4f109d0274"
-                  }
-            },
-            {
-                  "id": "c1199c18-d484-4147-86fc-e557ec796f89",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "ferret-to-human-spell",
-                        "category": "Transfiguration",
-                        "creator": null,
-                        "effect": "Changes ferrets into humans",
-                        "hand": "Point wand at target",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/3/3b/Ferret_to_human_GIF.gif",
-                        "incantation": null,
-                        "light": "None",
-                        "name": "Ferret to human spell",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Ferret_to_human_spell"
-                  },
-                  "links": {
-                        "self": "/v1/spells/c1199c18-d484-4147-86fc-e557ec796f89"
-                  }
-            },
-            {
-                  "id": "989b7d91-fea4-45eb-95bd-0f16abfa0133",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "fianto-duri",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Strengthens magical protections",
-                        "hand": "Point skyward",
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/9/95/DH2_Protego_Maxima%2C_Fianto_Duri%2C_Repello_Inimicum.gif",
-                        "incantation": "Fianto Duri(fee-AHN-toe DYOU-ree)",
-                        "light": "Blueish white",
-                        "name": "Fianto Duri",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Fianto_Duri"
-                  },
-                  "links": {
-                        "self": "/v1/spells/989b7d91-fea4-45eb-95bd-0f16abfa0133"
-                  }
-            },
-            {
-                  "id": "cd221cf7-9778-4bf3-a235-87cf7ef56f97",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "fidelius-charm",
-                        "category": "Charm",
-                        "creator": null,
-                        "effect": "Conceals a secret",
-                        "hand": null,
-                        "image": null,
-                        "incantation": null,
-                        "light": null,
-                        "name": "Fidelius Charm",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Fidelius_Charm"
-                  },
-                  "links": {
-                        "self": "/v1/spells/cd221cf7-9778-4bf3-a235-87cf7ef56f97"
-                  }
-            },
-            {
-                  "id": "7711d5b0-07de-46ae-b81e-02e00ce91cd3",
-                  "type": "spell",
-                  "attributes": {
-                        "slug": "fiendfyre",
-                        "category": "Curse",
-                        "creator": null,
-                        "effect": "Unleashed cursed fire",
-                        "hand": null,
-                        "image": "https://static.wikia.nocookie.net/harrypotter/images/1/18/Harry_and_Draco.png",
-                        "incantation": "Pestis Incendium (PESS-tis in-SEN-dee-um)",
-                        "light": "Fire",
-                        "name": "Fiendfyre",
-                        "wiki": "https://harrypotter.fandom.com/wiki/Fiendfyre"
-                  },
-                  "links": {
-                        "self": "/v1/spells/7711d5b0-07de-46ae-b81e-02e00ce91cd3"
+                        "self": "/v1/spells/69e085f5-69a1-46cc-9f52-b85c7de1603a"
                   }
             }
       ],
       "meta": {
             "pagination": {
-                  "current": 1,
-                  "next": 2,
-                  "last": 4,
+                  "current": 4,
+                  "first": 1,
+                  "prev": 3,
                   "records": 315
             },
             "copyright": "Copyright \u00a9 Potter DB 2024",
-            "generated_at": "2024-01-14T04:55:13.903+00:00"
+            "generated_at": "2024-01-15T17:08:53.188+00:00"
       },
       "links": {
-            "self": "https://api.potterdb.com/v1/spells?page%5Bnumber%5D=1",
-            "current": "https://api.potterdb.com/v1/spells?page[number]=1",
-            "next": "https://api.potterdb.com/v1/spells?page[number]=2",
-            "last": "https://api.potterdb.com/v1/spells?page[number]=4"
+            "self": "https://api.potterdb.com/v1/spells?page%5Bnumber%5D=4",
+            "current": "https://api.potterdb.com/v1/spells?page[number]=4",
+            "first": "https://api.potterdb.com/v1/spells?page[number]=1",
+            "prev": "https://api.potterdb.com/v1/spells?page[number]=3"
       }
 }

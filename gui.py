@@ -342,7 +342,8 @@ def get_random_potion_data():
 
         #displaying the random potion characteristics
         potion_characteristics = random_potion.get('characteristics', 'N/A')
-        potion_characteristics_label = Label(potions_info_frame, text=f"Characteristics: {potion_characteristics}", font=('Times New Roman', 11), bg="#EFD78E", wraplength=340)
+        potion_characteristics_label = Label(potions_info_frame, text=f"Characteristics: {potion_characteristics}", font=('Times New Roman', 11), bg="#EFD78E", 
+                                             wraplength=340)
         potion_characteristics_label.grid(row=4, column=1, padx=40)
 
         #displaying the random potion difficulty
@@ -481,15 +482,15 @@ movies_button.place(x=190, y=0, width=160,height=50)
 movies_indicator= Label(options_frame)
 movies_indicator.place(x=243, y=46, width=57, height=3)
 
-characters_button = Button(options_frame,image=characters_icon, compound=LEFT, text=" Characters", font=('Georgia',14), bd=0, fg='#BFBFBF', activeforeground="white", bg="#41347D",
-                      cursor='hand2',command=lambda: switch_indicator(indicator=characters_indicator, page=characters_page))
+characters_button = Button(options_frame,image=characters_icon, compound=LEFT, text=" Characters", font=('Georgia',14), bd=0, fg='#BFBFBF', activeforeground="white", 
+                           bg="#41347D",cursor='hand2',command=lambda: switch_indicator(indicator=characters_indicator, page=characters_page))
 characters_button.place(x=350, y=0, width=160,height=50)
 
 characters_indicator= Label(options_frame)
 characters_indicator.place(x=390, y=46, width=80, height=3)
 
-potions_button = Button(options_frame, image=potions_icon, compound=LEFT, text=" Potions", font=('Georgia',14), bd=0, fg='#BFBFBF', activeforeground="white", bg="#41347D",
-                      cursor='hand2',command=lambda: switch_indicator(indicator=potions_indicator, page=potions_page))
+potions_button = Button(options_frame, image=potions_icon, compound=LEFT, text=" Potions", font=('Georgia',14), bd=0, fg='#BFBFBF', activeforeground="white",
+                        bg="#41347D", cursor='hand2',command=lambda: switch_indicator(indicator=potions_indicator, page=potions_page))
 potions_button.place(x=510, y=0, width=160,height=50)
 
 potions_indicator= Label(options_frame)
@@ -531,11 +532,13 @@ def books_page():
     get_books_button.pack(side=LEFT,  padx=5, pady=10, ipady=4, ipadx=7)
 
     #adding an 'Instructions' button
-    instructions_button = Button(buttons_frame, text="Instructions", font=('Times New Roman', 14), bg="green", fg="white",cursor='hand2', command=lambda: switch_indicator(indicator=books_indicator, page=replace_start_frame))
+    instructions_button = Button(buttons_frame, text="Instructions", font=('Times New Roman', 14), bg="green", fg="white",cursor='hand2', 
+                                 command=lambda: switch_indicator(indicator=books_indicator, page=replace_start_frame))
     instructions_button.pack(side=LEFT,  padx=5, pady=10, ipady=4, ipadx=7)
 
     #adding an 'Exit' button
-    exit_button = Button(buttons_frame, text="Exit", font=('Times New Roman', 14), bg="red", fg="white",cursor='hand2', command=lambda: switch_indicator(indicator=books_indicator, page=replace_main_frame))
+    exit_button = Button(buttons_frame, text="Exit", font=('Times New Roman', 14), bg="red", fg="white",cursor='hand2', 
+                         command=lambda: switch_indicator(indicator=books_indicator, page=replace_main_frame))
     exit_button.pack(side=LEFT,  padx=5, pady=10, ipady=4, ipadx=7)
 
     #creating a books_info_frame
@@ -558,11 +561,13 @@ def movies_page():
     get_movies_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     #adding an 'Instructions' button
-    instructions_button = Button(buttons_frame, text="Instructions", font=('Times New Roman', 14), bg="green", fg="white",cursor='hand2', command=lambda: switch_indicator(indicator=movies_indicator, page=replace_start_frame))
+    instructions_button = Button(buttons_frame, text="Instructions", font=('Times New Roman', 14), bg="green", fg="white",cursor='hand2', 
+                                 command=lambda: switch_indicator(indicator=movies_indicator, page=replace_start_frame))
     instructions_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     #adding an 'Exit' button
-    exit_button = Button(buttons_frame, text="Exit", font=('Times New Roman', 14), bg="red", fg="white",cursor='hand2', command=lambda: switch_indicator(indicator=movies_indicator, page=replace_main_frame))
+    exit_button = Button(buttons_frame, text="Exit", font=('Times New Roman', 14), bg="red", fg="white",cursor='hand2', 
+                         command=lambda: switch_indicator(indicator=movies_indicator, page=replace_main_frame))
     exit_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     #creating a movies info frame
@@ -589,7 +594,8 @@ def characters_page():
     search_entry.pack(side=LEFT, padx=5, pady=10, ipady=8, ipadx=7)
 
     #adding a 'Search' button
-    search_button = Button(search_frame, text="Search", font=('Times New Roman', 14), bg="blue", fg="white",cursor='hand2', command=lambda: search_characters(search_entry.get()))
+    search_button = Button(search_frame, text="Search", font=('Times New Roman', 14), bg="blue", fg="white",cursor='hand2', 
+                           command=lambda: search_characters(search_entry.get()))
     search_button.pack(side=LEFT, padx=5, pady=10, ipady=1, ipadx=7)
 
     #adding a buttons frame
@@ -597,11 +603,13 @@ def characters_page():
     buttons_frame.pack(side=TOP)
 
     #adding an 'Instructions' button
-    instructions_button = Button(buttons_frame, text="Instructions", font=('Times New Roman', 14), bg="green", fg="white",cursor='hand2', command=lambda: switch_indicator(indicator=characters_indicator, page=replace_start_frame))
+    instructions_button = Button(buttons_frame, text="Instructions", font=('Times New Roman', 14), bg="green", fg="white",cursor='hand2', 
+                                 command=lambda: switch_indicator(indicator=characters_indicator, page=replace_start_frame))
     instructions_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     #adding an 'Exit' button
-    exit_button = Button(buttons_frame, text="Exit", font=('Times New Roman', 14), bg="red", fg="white",cursor='hand2', command=lambda: switch_indicator(indicator=characters_indicator, page=replace_main_frame))
+    exit_button = Button(buttons_frame, text="Exit", font=('Times New Roman', 14), bg="red", fg="white",cursor='hand2', 
+                         command=lambda: switch_indicator(indicator=characters_indicator, page=replace_main_frame))
     exit_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     #creating a characters_info_frame
@@ -620,15 +628,18 @@ def potions_page():
     buttons_frame.pack(side=TOP, pady=10)
 
     #adding a 'Get Random Potions' button
-    get_random_potions_button = Button(buttons_frame, text="Get A Random Potion", font=('Times New Roman', 14), bg="blue", fg="white",cursor='hand2', command=get_random_potion_data)
+    get_random_potions_button = Button(buttons_frame, text="Get A Random Potion", font=('Times New Roman', 14), bg="blue", fg="white",cursor='hand2', 
+                                       command=get_random_potion_data)
     get_random_potions_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     #adding an 'Instructions' button
-    instructions_button = Button(buttons_frame, text="Instructions", font=('Times New Roman', 14), bg="green", fg="white",cursor='hand2', command=lambda: switch_indicator(indicator=potions_indicator, page=replace_start_frame))
+    instructions_button = Button(buttons_frame, text="Instructions", font=('Times New Roman', 14), bg="green", fg="white",cursor='hand2', 
+                                 command=lambda: switch_indicator(indicator=potions_indicator, page=replace_start_frame))
     instructions_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     #adding an 'Exit' button
-    exit_button = Button(buttons_frame, text="Exit", font=('Times New Roman', 14), bg="red", fg="white",cursor='hand2', command=lambda: switch_indicator(indicator=potions_indicator, page=replace_main_frame))
+    exit_button = Button(buttons_frame, text="Exit", font=('Times New Roman', 14), bg="red", fg="white",cursor='hand2', 
+                         command=lambda: switch_indicator(indicator=potions_indicator, page=replace_main_frame))
     exit_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     #creating a potions_info_frame
@@ -647,15 +658,18 @@ def spells_page():
     buttons_frame.pack(side=TOP, pady=10)
 
     #adding a 'Get Random Spell' button
-    get_random_spell_button = Button(buttons_frame, text="Get A Random Spell", font=('Times New Roman', 14), bg="blue", fg="white",cursor='hand2', command=get_random_spell_data)
+    get_random_spell_button = Button(buttons_frame, text="Get A Random Spell", font=('Times New Roman', 14), bg="blue", fg="white",cursor='hand2', 
+                                     command=get_random_spell_data)
     get_random_spell_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     #adding an 'Instructions' button
-    instructions_button = Button(buttons_frame, text="Instructions", font=('Times New Roman', 14), bg="green", fg="white",cursor='hand2', command=lambda: switch_indicator(indicator=spells_indicator, page=replace_start_frame))
+    instructions_button = Button(buttons_frame, text="Instructions", font=('Times New Roman', 14), bg="green", fg="white",cursor='hand2', 
+                                 command=lambda: switch_indicator(indicator=spells_indicator, page=replace_start_frame))
     instructions_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     #adding an 'Exit' button
-    exit_button = Button(buttons_frame, text="Exit", font=('Times New Roman', 14), bg="red", fg="white",cursor='hand2', command=lambda: switch_indicator(indicator=spells_indicator, page=replace_main_frame))
+    exit_button = Button(buttons_frame, text="Exit", font=('Times New Roman', 14), bg="red", fg="white",cursor='hand2', 
+                         command=lambda: switch_indicator(indicator=spells_indicator, page=replace_main_frame))
     exit_button.pack(side=LEFT, padx=5, pady=10, ipady=4, ipadx=7)
 
     #creating a spells_info_frame
