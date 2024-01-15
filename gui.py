@@ -20,7 +20,7 @@ def reset_indicators():
     #function to remove the indicators
     for child in options_frame.winfo_children():
         if isinstance(child, Label):
-            child['bg'] = '#41347D' #will change the ng color of the indicator to the color of the button
+            child['bg'] = '#41347D' #will change the bg color of the indicator to the color of the button
 
 def switch_indicator(indicator, page):
     #funtion to switch the indicators with the button
